@@ -26,8 +26,8 @@ I will enter the job market soon. If you are interested in my background, please
 * **2018-2020**, Master, Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/)
 
 ## Experience
-* **Summer 2015**, _Computer Vision Intern_, System Imperiem-Media Research Asia. Mentor: Cheng Chen
-* **Spring 2016**, _Junior Data Scientist_, Department of Electrical and Computer Engineering@Brigham Young University. Advisor: [Prof. Brent Nelson](https://ece.byu.edu/faculty/brent_nelson)
+* **02/2020-08/2020**, _Computer Vision Intern_, System Imperiem-Media Research Asia. Mentor: Cheng Chen
+* **09/2020-present**, _Junior Data Scientist_, 3WM 
 
 
 ## Publications 
@@ -54,8 +54,8 @@ I will enter the job market soon. If you are interested in my background, please
 * 2017: NIPS, SIGIR
 
 ## Skills
-* Programming Language: Python (most frequently used), C/C++/C#, Java, Matlab, Bash
-* Tools: Linux, Git, Vim, Latex, Google Cloud Platform, AWS, Deep Learning Frameworks (Pytorch > Keras > TensorFlow)
+* Programming Language: Python (most frequently used), C/C++, Java, Matlab, Bash, Android, Arduino.
+* Tools: Linux, Git, Latex, Google Cloud Platform, AWS, Deep Learning Frameworks (Pytorch > Keras > TensorFlow)
 * Deep Learning Models: CNN, RNN, Transformer, BERT, Seq2seq, Memory Networks, Variational Auto-Encoders
 * Languages: English (professional), Chinese (native), Cantonese (basic)
 
