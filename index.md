@@ -3,14 +3,13 @@ layout: default
 ---
 
 # About Me
-I am a final year Ph.D. candidate at [The Chinese University of Hong Kong](http://www.cuhk.edu.hk), under the supervision of [Prof. Michael R. Lyu](https://www.cse.cuhk.edu.hk/lyu/) and [Prof. Irwin King](https://www.cse.cuhk.edu.hk/irwin.king/).  Before that, I obtained my B.Sci. degree from [Sun Yat-sen University](http://www.sysu.edu.cn/2012/en/index.htm) with an outstanding student honor. My major research interest lies in the intersection of *natural language generation* and *social media analysis*, as well as the *vision-language understanding*. See my [Google scholar](https://scholar.google.com/citations?user=iyxbtcEAAAAJ&hl=en) for more details.
+I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) Fez - Morocco, under the supervision of [Prof. XXX]().  Before that, I obtained my Master degree from [FSDM-USMBA](http://www.fsdmfes.ac.ma/) with an outstanding student honor. My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *social media analysis*. See my [Google scholar](https://scholar.google.com/citations?user=iyxbtcEAAAAJ&hl=en) for more details.
 
-I will enter the job market soon. If you are interested in my background, please contact me: [yuewang AT cse DOT cuhk DOT edu DOT hk](mailto:yuewang@cse.cuhk.edu.hk).
+I will enter the job market soon. If you are interested in my background, please contact me: [mohammed DOT elkhou1 AT usmba DOT ac DOT ma](mailto:mohammed.elkhou1@usmba.ac.ma) or [m DOT elkhou AT hotmail DOT com](mailto:m.elkhou@hotmail.com).
 
 ## Research Interests
-* In general: Deep Learning, Machine Learning, Natural Language Processing, Computer Vision
-* **Language Understanding in Social Media**: Hashtag Annotation, Keyphrase Generation
-* **Vision and Language Understanding**: Visual Dialog, Vision-Language Pretraining
+* In general: Deep Learning, Machine Learning, Computer Vision, Natural Language Processing.
+* **Language Understanding in Social Media**: Hashtag Annotation, Topic Detection
 
 
 ## Recent News
@@ -23,15 +22,13 @@ I will enter the job market soon. If you are interested in my background, please
 * **30/05/2019**, attend NAACL 2019 in Minneapolis, USA
 
 ## Education
-* **2016-present**, Ph.D. candidate, The Chinese University of Hong Kong, [Department of Computer Science and Engineering](https://www.cse.cuhk.edu.hk). Supervisor: [Prof. Michael R. Lyu](https://www.cse.cuhk.edu.hk/lyu/) and [Prof. Irwin King](https://www.cse.cuhk.edu.hk/irwin.king/)
-* **2012-2016**, B.Sci., Sun Yat-sen University, [School of Data and Computer Science](http://sdcs.sysu.edu.cn/). GPA: 3.94/4.00 (**Top 3**)
+* **2020-present**, Ph.D. candidate, Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/). Supervisor: [Prof. XXXX]().
+* **2018-2020**, Master, Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/)
 
 ## Experience
-* **Summer 2015**, _Research Intern_, System Group@Microsoft Research Asia. Mentor: Cheng Chen
-* **Spring 2016**, _Visiting Student_, Department of Electrical and Computer Engineering@Brigham Young University. Advisor: [Prof. Brent Nelson](https://ece.byu.edu/faculty/brent_nelson)
-* **Summer 2017**, _Project Collaborator_, 2012 Lab@Huawei
-* **Summer 2018**, _Research Intern_, NLP Center@Tencent AI Lab. Mentor: [Prof. Jing Li](http://www4.comp.polyu.edu.hk/~jing1li/)
-* **Summer 2019**, _Research Intern_, Salesforce Research Asia. Mentor: [Prof. Steven Hoi](https://sites.google.com/view/stevenhoi/home) and [Prof. Shafiq Rayhan Joty](https://raihanjoty.github.io/)
+* **Summer 2015**, _Computer Vision Intern_, System Imperiem-Media Research Asia. Mentor: Cheng Chen
+* **Spring 2016**, _Junior Data Scientist_, Department of Electrical and Computer Engineering@Brigham Young University. Advisor: [Prof. Brent Nelson](https://ece.byu.edu/faculty/brent_nelson)
+
 
 ## Publications 
 * **Yue Wang**, Shafiq Joty, Michael R. Lyu, Irwin King, Caiming Xiong, and Steven C.H. Hoi. **VD-BERT: A Unified Vision and Dialog Transformer with BERT**. (**EMNLP 2020**, our VD-BERT has been ranked **No.1** in the [Visual Dialog leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/161/leaderboard/483) from 01/2020-05/2020).\[[paper](https://arxiv.org/abs/2004.13278)\]\[[zhihu](https://zhuanlan.zhihu.com/p/141605303)\]\[[code](https://github.com/salesforce/VD-BERT)\]
@@ -39,7 +36,7 @@ I will enter the job market soon. If you are interested in my background, please
 * **Yue Wang**, Jing Li, Hou Pong Chan, Irwin King, Michael R. Lyu, Shuming Shi. **Topic-Aware Neural Keyphrase Generation for Social Media Language**. Florence, Italy (**ACL 2019**). \[[paper](https://www.aclweb.org/anthology/P19-1240)\]\[[code](https://github.com/yuewang-cuhk/TAKG)\]\[[poster](https://yuewang-cuhk.github.io/file/ACL2019_yuewang_final.pdf)\]
 * **Yue Wang**, Jing Li, Irwin King, Michael R. Lyu, Shuming Shi. **Microblog Hashtag Generation via Encoding Conversation Contexts**. Minneapolis, USA (**NAACL-HLT 2019**, Oral).  \[[paper](https://www.aclweb.org/anthology/N19-1164)\]\[[code](https://github.com/yuewang-cuhk/HashtagGeneration)\]\[[slide](https://yuewang-cuhk.github.io/file/naacl19_slide.pdf)\]
 * Jian Li, **Yue Wang**, Michael R. Lyu, Irwin King. **Code Completion with Neural Attention and Pointer Networks**. Stockholm, Sweden (**IJCAI 2018**, Oral). \[[paper](https://www.ijcai.org/proceedings/2018/0578.pdf)\]\[[slide](https://yuewang-cuhk.github.io/file/ijcai18_slide.pdf)\]
-* **Yue Wang**, Zibin Zheng, Michael R. Lyu. **Entropy-based Service Selection with Uncertain QoS for Mobile Cloud Computing**.  Hangzhou, China (**IEEE CIC 2015**). 
+* **Yue Wang**, Zibin Zheng, Michael R. Lyu. **Entropy-based Service Selection with Uncertain QoS for Mobile Cloud Computing**.  Hangzhou, China (**IEEE CIC 2015**).
 
 ## Selected Awards
 * 2013, **National Scholarship** awarded by The Ministry of Education, China (Top 1)
