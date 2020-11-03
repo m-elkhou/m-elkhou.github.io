@@ -5,7 +5,7 @@ layout: default
 # About Me
 I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) Fez - Morocco, under the supervision of [Prof. XXX]().  Before that, I obtained my Master degree from [FSDM-USMBA](http://www.fsdmfes.ac.ma/) with an outstanding student honor. My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *social media analysis*. See my [Google scholar](https://scholar.google.com/citations?user=iyxbtcEAAAAJ&hl=en) for more details.
 
-I will enter the job market soon. If you are interested in my background, please contact me: [mohammed DOT elkhou1 AT usmba DOT ac DOT ma](mailto:mohammed.elkhou1@usmba.ac.ma) or [m DOT elkhou AT hotmail DOT com](mailto:m.elkhou@hotmail.com).
+I will enter the job market soon. If you are interested in my background, please contact me: [m DOT elkhou AT hotmail DOT com](mailto:m.elkhou@hotmail.com) or [mohammed DOT elkhou1 AT usmba DOT ac DOT ma](mailto:mohammed.elkhou1@usmba.ac.ma).
 
 ## Research Interests
 * In general: Deep Learning, Machine Learning, Computer Vision, Natural Language Processing.
@@ -28,7 +28,6 @@ I will enter the job market soon. If you are interested in my background, please
 ## Experience
 * **02/2020-08/2020**, _Computer Vision Intern_, System Imperiem-Media Research Asia. Mentor: Cheng Chen
 * **09/2020-present**, _Junior Data Scientist_, 3WM 
-
 
 ## Publications 
 * **Yue Wang**, Shafiq Joty, Michael R. Lyu, Irwin King, Caiming Xiong, and Steven C.H. Hoi. **VD-BERT: A Unified Vision and Dialog Transformer with BERT**. (**EMNLP 2020**, our VD-BERT has been ranked **No.1** in the [Visual Dialog leaderboard](https://evalai.cloudcv.org/web/challenges/challenge-page/161/leaderboard/483) from 01/2020-05/2020).\[[paper](https://arxiv.org/abs/2004.13278)\]\[[zhihu](https://zhuanlan.zhihu.com/p/141605303)\]\[[code](https://github.com/salesforce/VD-BERT)\]
@@ -79,4 +78,3 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Hobbies
 * Sports: playing badminton, swimming, hiking
-* Volunteer activities: I co-founded [_Batou volunteer association_](https://mp.weixin.qq.com/s/42OKBVeQeZw6ujNI35r9jg) (Shantou, China) in summer 2013. We offer free tutoring to high school students each summer in my hometown. More than **1000** students have been served until now.

@@ -14,4 +14,3 @@ To use the Minimal theme:
   - The main content is stored in the `index.md`. 
   - The left user profile is decided in the `_layouts/default.html`
   - You can put your image under `assets/img/`. Pay attention to the size of the image.
-
