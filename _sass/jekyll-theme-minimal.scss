@@ -2,15 +2,17 @@
 @import "rouge-github";
 
 body {
-  background-color: #fff;
-  padding:50px;
+  background-image: url("/assets/img/bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding:10px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#727272;
+  color:#d6f0ff;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:rgb(52, 154, 223);
   margin:0 0 20px;
 }
 
@@ -27,15 +29,15 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:rgb(52, 154, 223);;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#51d2fa;
 }
 
 a {
-  color:#267CB9;
+  color:rgb(0, 225, 255);
   text-decoration:none;
 }
 
@@ -46,13 +48,13 @@ a:hover, a:focus {
 
 a small {
   font-size:11px;
-  color:#777;
+  color:rgb(0, 255, 255);
   margin-top:-0.3em;
   display:block;
 }
 
 a:hover small {
-  color:#777;
+  color:rgb(0, 255, 255);
 }
 
 .wrapper {
@@ -69,7 +71,7 @@ blockquote {
 
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
+  color:rgb(31, 151, 250);
 }
 
 pre {
@@ -92,12 +94,12 @@ th, td {
 }
 
 dt {
-  color:#444;
+  color:rgb(48, 161, 206);
   font-weight:700;
 }
 
 th {
-  color:#444;
+  color:rgb(48, 161, 206);
 }
 
 img {
@@ -156,7 +158,7 @@ ul.downloads {
 }
 
 strong {
-  color:#222;
+  color:rgba(50, 163, 207, 0.918);
   font-weight:700;
 }
 
@@ -168,7 +170,7 @@ strong {
 .downloads a strong {
   font-size:14px;
   display:block;
-  color:#222;
+  color:rgb(67, 171, 255);
 }
 
 section {
@@ -267,6 +269,6 @@ footer {
   body {
     padding:0.4in;
     font-size:12pt;
-    color:#444;
+    color:rgba(50, 163, 207, 0.918);
   }
 }
