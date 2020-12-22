@@ -75,25 +75,30 @@ I will enter the job market soon. If you are interested in my background, please
   * Tools : Flask, Python, Image Mining and Android.
   * Cancer detectionfrom analysis of skin lesions (ISIC 2017).
   * ASL alphabet detectionand numbers from human gestures.
-  
-  > **Tools** : Python(Jupyter), Google Colab, CBIR, KNN, SVM.</br>
+  > **Tools** : Python(Jupyter), Google Colab, CBIR, KNN, SVM.
+  >
   > **GitHub link** : [🔗](https://github.com/m-elkhou/Image_Mining)
 
 * Web Mining [🔗](https://github.com/m-elkhou/Web_Mining) (10/2019–12/2019)
-  > Mining social media network for discovering Moroccan people topics.</br>
+  > Mining social media network for discovering Moroccan people topics.
+  >
   > **Tools** : Python(Jupyter), Twitter API, Scrapy, NLTK, word2vec , TF-IDF, LDA.
 
 * Internet of Things [🔗](https://github.com/m-elkhou/Security-robot) (11/2018-05/2019)
-  > Android and Arduino application : Build a guard robot to secure the home against theft and gas leaks.</br>
+  > Android and Arduino application : Build a guard robot to secure the home against theft and gas leaks.
+  >
   > **Tools** : Web socket, USB communication, FireBaseAPI, Volley API.
 * Business Intelligence [🔗](https://www.youtube.com/watch?v=WemPeAQ8708) (10/2019–10/2019)
-  > Proposal of an IT/BI solution for a commercial data analysis system "OrderItem".</br>
+  > Proposal of an IT/BI solution for a commercial data analysis system "OrderItem".
+  >
   > **Tools** : Talend, Pentaho, Power BI.
 * Credit Card Management [🔗](https://github.com/m-elkhou/CreditCard) (12/2018-12/2018)
-  > Android mobile application.</br>
+  > Android mobile application.
+  >
   > **Tools** : RESTful API, Volley, JEE.
 * Graduation Project (BachelorDegree) : TETRIS Game [🔗](https://github.com/m-elkhou/Tetris) (02/2018-06/2018)
-  > Desktop application : Game development : ‘’TETRIS’’.</br>
+  > Desktop application : Game development : ‘’TETRIS’’.
+  >
   > **Tools** : JAVA / SWING –AWT.
 
 ## Certificates 🏆
