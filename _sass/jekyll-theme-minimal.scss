@@ -113,6 +113,18 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+ul.links {
+  list-style:none;
+  padding:0;
+  width:300px;
+  // scroll-margin: ;
+}
+
+.links li img {
+  width:16px;
+  height:16px;
+}
+
 ul.downloads {
   list-style:none;
   height:40px;
