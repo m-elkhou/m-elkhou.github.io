@@ -107,6 +107,9 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Hobbies
 
-* Sports: reading, swimming 🏊, cooding, traveling.
+* Traveling 🧳.
+* Sports 🚴‍♂️: Hiking in Fes, running on the beach in Brittany, practicing Fitness/Crossfit. I used to play volleyball. I also used to (and still do sometimes) practice Taekwondo.
+* Reading/Learning 💻: I spend most of my free time trying to learn stuffs. I try to do 1 online course per month, although I don't always manage to do so.
+* 
 
 🎯 That's all the fork 🙏
