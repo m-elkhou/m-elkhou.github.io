@@ -67,7 +67,7 @@ I will enter the job market soon. If you are interested in my background, please
 |**Tools**| Linux, Git, Latex, Deep Learning Frameworks (Pytorch > Keras > TensorFlow).|
 |**Languages**| Arabic (native), French (Professional), English (Professional).|
 
-## Academic Project 📑
+## Academic Project 📝
 
 * Machine Learning & Image Mining (09/2019–02/2020)
   * Micro expressions classification [🔗](https://github.com/m-elkhou/Facial_Expression_Detection)
