@@ -114,7 +114,7 @@ header {
 }
 
 ul.links {
-  // list-style:none;
+  list-style:none;
   padding:0;
   width:300px;
   // scroll-margin: ;
@@ -245,7 +245,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 720px) {
+@media print, screen and (max-width: 960px) {
   body {
     word-wrap:break-word;
   }
@@ -268,13 +268,10 @@ footer {
     padding:15px;
   }
 
-  .downloads {
+  .links {
     width:99%;
   }
 
-  .downloads li, .downloads li + li + li {
-    width:33%;
-  }
 }
 
 @media print {
