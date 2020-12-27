@@ -4,7 +4,7 @@ layout: default
 
 # About Me 💡
 
-I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) (USMBA) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) (`FSDM`), Fez - Morocco, under the supervision of [Prof. Jamal RIFFI](https://scholar.google.com/citations?user=DPK9m_YAAAAJ&hl). Before that, I obtained my Master degree from [`FSDM` - `USMBA`](http://www.fsdmfes.ac.ma/). My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *social media analysis*. See my [Google scholar]() for more details.
+I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) (USMBA) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) (`FSDM`), Fez - Morocco, under the supervision of [Prof. Jamal RIFFI](https://scholar.google.com/citations?user=DPK9m_YAAAAJ&hl). Before that, I obtained my Master degree from [`FSDM` - `USMBA`](http://www.fsdmfes.ac.ma/). My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *Automatic Speech Recognition*. See my [Google scholar]() for more details.
 
 I will enter the job market soon. If you are interested in my background, please contact me: [m DOT elkhou AT hotmail DOT com](mailto:m.elkhou@hotmail.com) or [mohammed DOT elkhou1 AT usmba DOT ac DOT ma](mailto:mohammed.elkhou1@usmba.ac.ma).
 
