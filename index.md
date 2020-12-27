@@ -4,14 +4,14 @@ layout: default
 
 # About Me 💡
 
-I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) (USMBA) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) (`FSDM`), Fez - Morocco, under the supervision of [Prof. Jamal RIFFI](https://scholar.google.com/citations?user=DPK9m_YAAAAJ&hl). Before that, I obtained my Master degree from [`FSDM` - `USMBA`](http://www.fsdmfes.ac.ma/). My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *Automatic Speech Recognition*. See my [Google scholar]() for more details.
+I am a first year Ph.D. candidate at [Sidi Mohamed ben Abdellah University](http://www.usmba.ac.ma/) (`USMBA`) [Faculty of Sciences Dhar El Mahraz](http://www.fsdmfes.ac.ma/) (`FSDM`), Fez - Morocco, under the supervision of [Prof. Jamal RIFFI](https://scholar.google.com/citations?user=DPK9m_YAAAAJ&hl). Before that, I obtained my Master degree from [`FSDM` - `USMBA`](http://www.fsdmfes.ac.ma/). My major research interest lies in the intersection of *Data Sciences* and *Computer Vision*, as well as the *Automatic Speech Recognition*. See my [Google scholar]() for more details.
 
 I will enter the job market soon. If you are interested in my background, please contact me: [m DOT elkhou AT hotmail DOT com](mailto:m.elkhou@hotmail.com) or [mohammed DOT elkhou1 AT usmba DOT ac DOT ma](mailto:mohammed.elkhou1@usmba.ac.ma).
 
 ## Research Interests 🎯
 
-* In general: Deep Learning, Machine Learning, Computer Vision, Natural Language Processing.
-* **Language Understanding in Social Media**: Hashtag Annotation, Topic Detection.
+* In general : Deep Learning, Machine Learning, Computer Vision, Natural Language Processing.
+* **Language Understanding in Social Media** : Hashtag Annotation, Topic Detection.
 
 <!-- ## Recent News
 * **08/10/2020**, our VD-BERT code has been released at [here](https://github.com/salesforce/VD-BERT)
@@ -27,7 +27,7 @@ I will enter the job market soon. If you are interested in my background, please
 * **2020-present**, Ph.D. candidate, LIIAN, Department of Computer Science, [Faculty of Science Dhar El Mahraz](http://www.fsdmfes.ac.ma/) Fez - Morocco. Supervisor: [Prof. Jamal RIFFI](https://scholar.google.com/citations?user=DPK9m_YAAAAJ&hl).
 * **2019-2020**, Master 2 : Data Science and Artificial Intelligence (`DSAI`), [Galilée](https://galilee.univ-paris13.fr/) Institute, [Sorbonne Paris Nord](https://www.univ-paris13.fr/) University, Paris - France.
 * **2018-2020**, Master : Web Intelligence and Data Science (`WISD`), Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/).
-  `WISD` : is a Master International Francophone double degree with the Master: (`DSAI`) at the Galilee Institute of the “Sorbonne Paris Nord“ University.
+  > `WISD` : is a Master International Francophone double degree with the Master: (`DSAI`) at the Galilee Institute of the “Sorbonne Paris Nord“ University.
 * **2016-2017**, Bachelor Degree : Mathematic and Computer Science, Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/).
 * **2015-2016**, DEUG : Mathematic and Computer Science, Sidi Mohamed ben Abdellah University, Fez - Morocco, [Department of Computer Science](http://www.fsdmfes.ac.ma/).
 * **2015**, High School graduate (Baccalaureate) : Mathematic Option (B), High School AL Adarissa, Fez - Morocco.
@@ -38,6 +38,7 @@ I will enter the job market soon. If you are interested in my background, please
   > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
   >
   > **Objectif** :
+  >
   > * Detection of advertising brand logos on billboards and newspapers (pipeline from data collection to deployment).
   > * Optimization of a speech recognition API (ASR).
 
@@ -45,6 +46,7 @@ I will enter the job market soon. If you are interested in my background, please
   > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
   >
   > **Objectif** :
+  >
   > * Detectionand recognition of objects (brand, logo, shape,...) in advertisingscreens on a TV stream.
   > * Comparative study between state-of-the-art object detection algorithms (YOLO, RetinaNet, FasterR-CNN, Mask R-CNN, Cascade Mask R-CNN ...).
   > Keywords : Python(Jupyter), Image Mining, Computer Vision, Object Detection, Detectron2, Tensorboard.
@@ -84,7 +86,7 @@ I will enter the job market soon. If you are interested in my background, please
 * Web Mining [🔗](https://github.com/m-elkhou/Web_Mining) (10/2019–12/2019)
   > Mining social media network for discovering Moroccan people topics.
   >
-  > **Tools** : Python(Jupyter), Twitter API, Scrapy, NLTK, word2vec , TF-IDF, LDA.
+  > **Tools** : Python(Jupyter), Twitter API, Scrapy, NLTK, word2vec, TF-IDF, LDA.
 
 * Internet of Things [🔗](https://github.com/m-elkhou/Security-robot) (11/2018-05/2019)
   > Android and Arduino application : Build a guard robot to secure the home against theft and gas leaks.
@@ -104,7 +106,7 @@ I will enter the job market soon. If you are interested in my background, please
 * Graduation Project (BachelorDegree) : TETRIS Game [🔗](https://github.com/m-elkhou/Tetris) (02/2018-06/2018)
   > Desktop application : Game development : ‘’TETRIS’’.
   >
-  > **Tools** : JAVA / SWING –AWT.
+  > **Tools** : JAVA / SWING – AWT.
 
 ## Certificates 🏆
 
@@ -112,11 +114,12 @@ I will enter the job market soon. If you are interested in my background, please
   > In this course, I have discovered how Deep Learning actually works, rather than the rest of the explanations that give a quick explanation or  surface-level description of concepts.
   >
   > Now I am able to :
-  > - Understand the major technology trends driving Deep Learning.
-  > - Build, train and apply fully connected deep neural networks.
-  > - Implement efficient (vectorized) neural networks.
-  > - Understand the key parameters in a neural network's architecture.
-  > - Apply deep learning to a my own applications.
+  >
+  >* Understand the major technology trends driving Deep Learning.
+  >* Build, train and apply fully connected deep neural networks.
+  >* Implement efficient (vectorized) neural networks.
+  >* Understand the key parameters in a neural network's architecture.
+  >* Apply deep learning to a my own applications.
   >
   > SKILLS : Artificial Neural Network, Backpropagation, Python Programming, Deep Learning.
 
@@ -130,14 +133,14 @@ I will enter the job market soon. If you are interested in my background, please
   >* Explore many algorithms and models:
   >   * Popular algorithms: Classification, Regression, Clustering, and Dimensional Reduction.
   >   * Popular models: Train/Test Split, Root Mean Squared Error, and Random Forests.
-  > Skills : Classification, Clustering, Recommender Systems, Regression, Supervised Learning, Unsupervised Learning.
+  > SKILLS : Classification, Clustering, Recommender Systems, Regression, Supervised Learning, Unsupervised Learning.
 
 * [Applied Data Science with Python - Level 2](https://www.youracclaim.com/badges/6521f6cc-75d8-449a-8436-aafd380c6a43/linked_in_profile) ( IBM ).
   > Thanks to this badge, I am able to code in Python for data science. Now I have the ability to analyze and visualize data with Python packages like scikit-learn, matplotlib.
   * [Python for Data Science](https://www.youracclaim.com/badges/b260babd-1119-4a24-ad90-428266ec4121) ( IBM )
     > Thanks to this badge, I am able to write my own Python scripts and perform basic hands-on data analysis using IBM's Jupyter-based lab environment.
-    > Skills : Data Science, Pandas, Python, Python Programming.
-  
+    > SKILLS : Data Science, Pandas, Python, Python Programming.
+
   * [Data Analysis with Python](https://courses.cognitiveclass.ai/certificates/8fdb8693319246b69645b49a3097d578) ( Cognitive Class ).
     > Thanks to this badge I'm able to analyze data using Python. This course take me from the basics of Python to exploring many different types of data. I learn how to prepare data for analysis, perform simple statistical analyses, create meaningful data visualizations, predict future trends from data, and more!
     >
@@ -155,13 +158,14 @@ I will enter the job market soon. If you are interested in my background, please
 
 * [Data Analysis Track](https://drive.google.com/file/d/1pNd9Vlepbw_DARuFwW8AP1-kkeE6WCRf/view) (One Million Arab Coders sur Udacity).
   > In this program, i have learned how to turn data into insights.
-  > - First, i have learned how to calculate statistics and build visuals used in industry to best display and communicate data insights.
-  > - Next, i have learned one of the most powerful tools available to data analysts, Structured Query Language (SQL), and i have leveraged SQL to extract and analyze data stored in databases.
+  >
+  >* First, i have learned how to calculate statistics and build visuals used in industry to best display and communicate data insights.
+  >* Next, i have learned one of the most powerful tools available to data analysts, Structured Query Language (SQL), and i have leveraged SQL to extract and analyze data stored in databases.
 
-## Hobbies
+## Hobbies 😍
 
 * Traveling 🧳.
-* Sports 🚴‍♂️: Hiking in Fes, running on the beach in Casa, practicing Fitness/Crossfit. I used to play volleyball. I also used to (and still do sometimes) practice Taekwondo.
+* Sports 🚴‍♂️: Hiking 🚶‍♀️ in Fes, running 🏃 on the beach in Casa, practicing Fitness/Crossfit. I used to play volleyball. I also used to (and still do sometimes) practice Taekwondo.
 * Reading/Learning 💻: I spend most of my free time trying to learn stuffs. I try to do 1 online course per month, although I don't always manage to do so.
 
 🎯 That's all the fork 🙏
