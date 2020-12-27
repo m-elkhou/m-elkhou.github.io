@@ -152,6 +152,7 @@ I will enter the job market soon. If you are interested in my background, please
   > In this program, i have learned how to turn data into insights.
   > - First, i have learned how to calculate statistics and build visuals used in industry to best display and communicate data insights.
   > - Next, i have learned one of the most powerful tools available to data analysts, Structured Query Language (SQL), and i have leveraged SQL to extract and analyze data stored in databases.
+
 ## Hobbies
 
 * Traveling 🧳.
