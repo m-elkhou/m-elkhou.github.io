@@ -74,11 +74,12 @@ I will enter the job market soon. If you are interested in my background, please
 * Automatic Micro-Expression Recognition (AMER) [🔗](https://github.com/m-elkhou/Facial_Expression_Detection) (01/2020–02/2020)
   > This project was about providing an Android application that can help people take charge of their own emotional health by capturing their micro expressions such as happiness, sadness, anger, disgust, surprise, fear, and neutral. This application consumes a web service which contains our finally Model. This Model predictor is created after testing different approaches for the facial expression recognition. the elaborated approaches are based on different algorithm for features extraction and different machine learning classifiers. The proposed automatic micro expression recognition (AMER) uses: OpenCV, Python and machine learning Algorithms.
   >
-  > Tools : Flask, Python, Image Mining and Android.
+  > **Tools** : Flask, Python, Image Mining and Android.
 
-* Machine Learning & Image Mining (09/2019–02/2020)
-  * Cancer detectionfrom analysis of skin lesions (ISIC 2017).
-  * ASL alphabet detectionand numbers from human gestures.
+* Machine Learning & Image Mining [🔗](https://github.com/m-elkhou/Image_Mining) (09/2019–02/2020)
+  >* Cancer detectionfrom analysis of skin lesions (ISIC 2017).
+  >* ASL alphabet detectionand numbers from human gestures.
+  >
   > **Tools** : Python(Jupyter), Google Colab, CBIR, KNN, SVM.
   >
   > **GitHub link** : [🔗](https://github.com/m-elkhou/Image_Mining)
@@ -88,7 +89,15 @@ I will enter the job market soon. If you are interested in my background, please
   >
   > **Tools** : Python(Jupyter), Twitter API, Scrapy, NLTK, word2vec, TF-IDF, LDA.
 
-* Internet of Things [🔗](https://github.com/m-elkhou/Security-robot) (11/2018-05/2019)
+* Text Mining [🔗](https://github.com/m-elkhou/Web_Mining) (10/2019–12/2019)
+  >
+  >* Classification des textes.
+  >* Moteur de recherche.
+  >* Réduction des dimension par méthode de Chi2
+  >
+  > **Tools** : Python, TF-IDF, NLTK, SVM, naive-bayes, hiérarchique clustering.
+
+* Internet of Things : Security Robot [🔗](https://github.com/m-elkhou/Security-robot) (11/2018-05/2019)
   > Android and Arduino application : Build a guard robot to secure the home against theft and gas leaks.
   >
   > **Tools** : Web socket, USB communication, FireBaseAPI, Volley API.
@@ -97,6 +106,20 @@ I will enter the job market soon. If you are interested in my background, please
   > Proposal of an IT/BI solution for a commercial data analysis system "OrderItem".
   >
   > **Tools** : Talend, Pentaho, Power BI.
+
+* Visual Analytic [🔗](https://github.com/m-elkhou/Visual_Analytic) (02/2019-05/2019)
+  >
+  >* Foreground / Background Segmentation (Image-Based) Using: Image Difference, Time Derivation, Moving Average, Running Average, and Median Filter
+  >* Foreground / background segmentation (Pixel-Based) using: MOG, MOG2 and GMG.
+  >* Motion recognition of cars using optical flow from a video
+  >* Follow the hand using SIFT Points of Interest.
+  >
+  > **Tools** : Python(Spyder), Open-CV.
+
+* Chat-app [🔗](https://github.com/m-elkhou/Chatt-App) (02/2019-02/2019)
+  > Desktop application for messaging and sharing file created with Java RMI Technology and Multithreading. GUI Java SWING (Chat Application) for university purpose in order to experiment RMI Technologies, and peer-to-peer communication.
+  >
+  > **Tools** :  JAVA / RMI / SWING.
 
 * Credit Card Management [🔗](https://github.com/m-elkhou/CreditCard) (12/2018-12/2018)
   > Android mobile application.
