@@ -34,21 +34,20 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Experience 💼
 
-* **09/2020-present**, _Junior Data Scientist_, in [3W Media](http://www.3wmedia.ma/) Company.
+* **10/2020-present**, _Junior Data Scientist_, in [3W Media](http://www.3wmedia.ma/) Company.
   > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
   >
   > **Objectif** :
   > * Detection of advertising brand logos on billboards and newspapers (pipeline from data collection to deployment).
   > * Optimization of a speech recognition API (ASR).
 
-* **02/2020-08/2020**, _Computer Vision Intern_, in [Imperiem-Media](https://www.imperium-media.com/) Company. Mentor: [Brahim WAKRIM](https://ma.linkedin.com/in/brahim-wakrim-58a90563).
+* **03/2020-09/2020**, _Computer Vision Intern_, in [Imperiem-Media](https://www.imperium-media.com/) Company. Mentor: [Brahim WAKRIM](https://ma.linkedin.com/in/brahim-wakrim-58a90563).
   > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
   >
   > **Objectif** :
   > * Detectionand recognition of objects (brand, logo, shape,...) in advertisingscreens on a TV stream.
   > * Comparative study between state-of-the-art object detection algorithms (YOLO, RetinaNet, FasterR-CNN, Mask R-CNN, Cascade Mask R-CNN ...).
   > Keywords : Python(Jupyter), Image Mining, Computer Vision, Object Detection, Detectron2, Tensorboard.
-
 
 ## Skills ⚙
 
@@ -70,10 +69,12 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Academic Project 📝
 
+* Automatic Micro-Expression Recognition (AMER) [🔗](https://github.com/m-elkhou/Facial_Expression_Detection) (01/2020–02/2020)
+  > This project was about providing an Android application that can help people take charge of their own emotional health by capturing their micro expressions such as happiness, sadness, anger, disgust, surprise, fear, and neutral. This application consumes a web service which contains our finally Model. This Model predictor is created after testing different approaches for the facial expression recognition. the elaborated approaches are based on different algorithm for features extraction and different machine learning classifiers. The proposed automatic micro expression recognition (AMER) uses: OpenCV, Python and machine learning Algorithms.
+  >
+  > Tools : Flask, Python, Image Mining and Android.
+
 * Machine Learning & Image Mining (09/2019–02/2020)
-  * Micro expressions classification [🔗](https://github.com/m-elkhou/Facial_Expression_Detection)
-  * Development of a mobile application that consumes a web service in order to classify micro expressions.
-  * Tools : Flask, Python, Image Mining and Android.
   * Cancer detectionfrom analysis of skin lesions (ISIC 2017).
   * ASL alphabet detectionand numbers from human gestures.
   > **Tools** : Python(Jupyter), Google Colab, CBIR, KNN, SVM.
@@ -89,14 +90,17 @@ I will enter the job market soon. If you are interested in my background, please
   > Android and Arduino application : Build a guard robot to secure the home against theft and gas leaks.
   >
   > **Tools** : Web socket, USB communication, FireBaseAPI, Volley API.
+
 * Business Intelligence [🔗](https://www.youtube.com/watch?v=WemPeAQ8708) (10/2019–10/2019)
   > Proposal of an IT/BI solution for a commercial data analysis system "OrderItem".
   >
   > **Tools** : Talend, Pentaho, Power BI.
+
 * Credit Card Management [🔗](https://github.com/m-elkhou/CreditCard) (12/2018-12/2018)
   > Android mobile application.
   >
   > **Tools** : RESTful API, Volley, JEE.
+
 * Graduation Project (BachelorDegree) : TETRIS Game [🔗](https://github.com/m-elkhou/Tetris) (02/2018-06/2018)
   > Desktop application : Game development : ‘’TETRIS’’.
   >
@@ -133,6 +137,7 @@ I will enter the job market soon. If you are interested in my background, please
   * [Python for Data Science](https://www.youracclaim.com/badges/b260babd-1119-4a24-ad90-428266ec4121) ( IBM )
     > Thanks to this badge, I am able to write my own Python scripts and perform basic hands-on data analysis using IBM's Jupyter-based lab environment.
     > Skills : Data Science, Pandas, Python, Python Programming.
+  
   * [Data Analysis with Python](https://courses.cognitiveclass.ai/certificates/8fdb8693319246b69645b49a3097d578) ( Cognitive Class ).
     > Thanks to this badge I'm able to analyze data using Python. This course take me from the basics of Python to exploring many different types of data. I learn how to prepare data for analysis, perform simple statistical analyses, create meaningful data visualizations, predict future trends from data, and more!
     >
