@@ -34,20 +34,21 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Experience 💼
 
-* **02/2020-08/2020**, _Computer Vision Intern_, in [Imperiem-Media](https://www.imperium-media.com/) Company. Mentor: [Brahim WAKRIM](https://ma.linkedin.com/in/brahim-wakrim-58a90563).
-  > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
-  >
-  > **Objectif** :
-  > - Detectionand recognition of objects(brand, logo, shape,...) in advertisingscreens on a TV stream.
-  > - Comparative studybetweenstate-of-the-art objectdetectionalgorithms(YOLO, RetinaNet, FasterR-CNN, Mask R-CNN, Cascade Mask R-CNN ...).
-  > - Keywords : Python(Jupyter), Image Mining, Computer Vision, Object Detection, Detectron2, Tensorboard.
-
 * **09/2020-present**, _Junior Data Scientist_, in [3W Media](http://www.3wmedia.ma/) Company.
   > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
   >
   > **Objectif** :
   > * Detection of advertising brand logos on billboards and newspapers (pipeline from data collection to deployment).
   > * Optimization of a speech recognition API (ASR).
+
+* **02/2020-08/2020**, _Computer Vision Intern_, in [Imperiem-Media](https://www.imperium-media.com/) Company. Mentor: [Brahim WAKRIM](https://ma.linkedin.com/in/brahim-wakrim-58a90563).
+  > **Address** : 600 Bd Moulay Youssef Casablanca - Morocco.
+  >
+  > **Objectif** :
+  > * Detectionand recognition of objects (brand, logo, shape,...) in advertisingscreens on a TV stream.
+  > * Comparative study between state-of-the-art object detection algorithms (YOLO, RetinaNet, FasterR-CNN, Mask R-CNN, Cascade Mask R-CNN ...).
+  > Keywords : Python(Jupyter), Image Mining, Computer Vision, Object Detection, Detectron2, Tensorboard.
+
 
 ## Skills ⚙
 
@@ -103,18 +104,58 @@ I will enter the job market soon. If you are interested in my background, please
 
 ## Certificates 🏆
 
-* [Machine Learning with Python -Level 1](https://www.youracclaim.com/badges/34341347-50ba-45d0-b651-510952aa3f51) ( IBM ).
-* [Applied Data Science with Python -Level 2](https://www.youracclaim.com/badges/6521f6cc-75d8-449a-8436-aafd380c6a43/linked_in_profile) ( IBM ).
-* [Python for Data Science](https://www.youracclaim.com/badges/b260babd-1119-4a24-ad90-428266ec4121) ( IBM )
-* [Data Analysis with Python](https://courses.cognitiveclass.ai/certificates/8fdb8693319246b69645b49a3097d578) ( Cognitive Class ).
-* [Data Visualization with Python](https://courses.cognitiveclass.ai/certificates/853847016d9d4f709cfbe1b32e3f2972) ( Cognitive Class ).
-* [Data Analysis Track](https://drive.google.com/file/d/1pNd9Vlepbw_DARuFwW8AP1-kkeE6WCRf/view) (One Million Arab Coders sur Udacity).
+* [Neural Networks and Deep Learning](https://www.coursera.org/account/accomplishments/verify/79K393HNUVCE) (deeplearning.ai - coursera).
+  > In this course, I have discovered how Deep Learning actually works, rather than the rest of the explanations that give a quick explanation or  surface-level description of concepts.
+  >
+  > Now I am able to :
+  > - Understand the major technology trends driving Deep Learning.
+  > - Build, train and apply fully connected deep neural networks.
+  > - Implement efficient (vectorized) neural networks.
+  > - Understand the key parameters in a neural network's architecture.
+  > - Apply deep learning to a my own applications.
+  >
+  > SKILLS : Artificial Neural Network, Backpropagation, Python Programming, Deep Learning.
 
+* [Machine Learning with Python - Level 1](https://www.youracclaim.com/badges/34341347-50ba-45d0-b651-510952aa3f51) ( IBM ).
+  > Thanks to this badge I'm able to understanding Supervised and Unsupervised Learning, such as applications of different types of machine learning models, building and evaluate machine learning models.
+  >
+  > This course dives into the basics of machine learning using Python  programming language.
+  >
+  >* Descover how Statistical Modeling relates to Machine Learning, and do a comparison of each.
+  >* Look at real-life examples of Machine learning and how it affects society.
+  >* Explore many algorithms and models:
+  >   * Popular algorithms: Classification, Regression, Clustering, and Dimensional Reduction.
+  >   * Popular models: Train/Test Split, Root Mean Squared Error, and Random Forests.
+  > Skills : Classification, Clustering, Recommender Systems, Regression, Supervised Learning, Unsupervised Learning.
+
+* [Applied Data Science with Python - Level 2](https://www.youracclaim.com/badges/6521f6cc-75d8-449a-8436-aafd380c6a43/linked_in_profile) ( IBM ).
+  > Thanks to this badge, I am able to code in Python for data science. Now I have the ability to analyze and visualize data with Python packages like scikit-learn, matplotlib.
+  * [Python for Data Science](https://www.youracclaim.com/badges/b260babd-1119-4a24-ad90-428266ec4121) ( IBM )
+    > Thanks to this badge, I am able to write my own Python scripts and perform basic hands-on data analysis using IBM's Jupyter-based lab environment.
+    > Skills : Data Science, Pandas, Python, Python Programming.
+  * [Data Analysis with Python](https://courses.cognitiveclass.ai/certificates/8fdb8693319246b69645b49a3097d578) ( Cognitive Class ).
+    > Thanks to this badge I'm able to analyze data using Python. This course take me from the basics of Python to exploring many different types of data. I learn how to prepare data for analysis, perform simple statistical analyses, create meaningful data visualizations, predict future trends from data, and more!
+    >
+    >* Import data sets
+    >* Clean and prepare data for analysis
+    >* Manipulate pandas DataFrame
+    >* Summarize data
+    >* Build machine learning models using scikit-learn
+    >* Build data pipelines
+
+  * [Data Visualization with Python](https://courses.cognitiveclass.ai/certificates/853847016d9d4f709cfbe1b32e3f2972) ( Cognitive Class ).
+    >One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will also enable you to extract information, better understand the data, and make more effective decisions.
+    >
+    > This Data Visualization with Python course, maked me able to take data that at first glance has little meaning and present that data in a form that makes sense to people. Various techniques have been developed for presenting data visually, but in this course, I use several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium.
+
+* [Data Analysis Track](https://drive.google.com/file/d/1pNd9Vlepbw_DARuFwW8AP1-kkeE6WCRf/view) (One Million Arab Coders sur Udacity).
+  > In this program, i have learned how to turn data into insights.
+  > - First, i have learned how to calculate statistics and build visuals used in industry to best display and communicate data insights.
+  > - Next, i have learned one of the most powerful tools available to data analysts, Structured Query Language (SQL), and i have leveraged SQL to extract and analyze data stored in databases.
 ## Hobbies
 
 * Traveling 🧳.
 * Sports 🚴‍♂️: Hiking in Fes, running on the beach in Casa, practicing Fitness/Crossfit. I used to play volleyball. I also used to (and still do sometimes) practice Taekwondo.
 * Reading/Learning 💻: I spend most of my free time trying to learn stuffs. I try to do 1 online course per month, although I don't always manage to do so.
-* 
 
 🎯 That's all the fork 🙏
