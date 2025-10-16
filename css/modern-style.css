@@ -196,6 +196,18 @@ body {
   transition: var(--transition);
 }
 
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .theme-toggle {
   background: none;
   border: 2px solid var(--border-color);
@@ -833,6 +845,34 @@ section {
 .form-input:not(:placeholder-shown) + .form-label {
   transform: translateY(-35px) scale(0.9);
   color: var(--accent-color);
+}
+
+/* Social Links in Contact Section */
+.social-links {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.social-links .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-links .social-link:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
 }
 
 /* Footer */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Test</title>
+    <link rel="stylesheet" href="css/modern-style.css">
+    <style>
+        .test-container {
+            padding: 20px;
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+        }
+        .test-box {
+            width: 200px;
+            height: 100px;
+            background: var(--accent-color);
+            margin: 20px 0;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .debug-info {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>CSS Variables Test</h1>
+        <div class="test-box">Accent Color Test</div>
+        <div class="debug-info">
+            <h3>CSS Variables Debug:</h3>
+            <p id="accent-test">--accent-color: <span id="accent-value"></span></p>
+            <p id="bg-test">--primary-bg: <span id="bg-value"></span></p>
+            <p id="text-test">--text-primary: <span id="text-value"></span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.documentElement;
+            const computedStyle = getComputedStyle(root);
+            
+            const accentColor = computedStyle.getPropertyValue('--accent-color').trim();
+            const primaryBg = computedStyle.getPropertyValue('--primary-bg').trim();
+            const textPrimary = computedStyle.getPropertyValue('--text-primary').trim();
+            
+            document.getElementById('accent-value').textContent = accentColor || 'NOT FOUND';
+            document.getElementById('bg-value').textContent = primaryBg || 'NOT FOUND';
+            document.getElementById('text-value').textContent = textPrimary || 'NOT FOUND';
+            
+            console.log('CSS Variables Test:', {
+                '--accent-color': accentColor,
+                '--primary-bg': primaryBg,
+                '--text-primary': textPrimary
+            });
+        });
+    </script>
+</body>
+</html>
