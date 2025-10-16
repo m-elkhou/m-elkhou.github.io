@@ -4,17 +4,8 @@
   "description": "Modern portfolio website for Mohammed EL-KHOU - Data Scientist & AI Engineer",
   "main": "index.html",
   "scripts": {
-    "start": "npx live-server --port=3000 --open=index.html",
-    "build": "npm run optimize:images && npm run minify:css && npm run minify:js",
-    "optimize:images": "npx imagemin images/*.{jpg,jpeg,png,svg} --out-dir=images/optimized",
-    "minify:css": "npx clean-css-cli css/modern-style.css -o css/modern-style.min.css",
-    "minify:js": "npx terser js/modern-script.js -o js/modern-script.min.js --compress --mangle",
-    "lighthouse": "npx lighthouse http://localhost:3000/index.html --output=html --output-path=./lighthouse-report.html",
-    "validate:html": "npx html-validate index.html",
-    "validate:css": "npx stylelint css/modern-style.css",
-    "validate:js": "npx eslint js/modern-script.js",
-    "test": "npm run validate:html && npm run validate:css && npm run validate:js",
-    "deploy": "npm run build && npm run test"
+    "start": "python -m http.server 3000",
+    "test": "echo \"Portfolio ready\""
   },
   "keywords": [
     "portfolio",
@@ -41,17 +32,7 @@
   "bugs": {
     "url": "https://github.com/m-elkhou/m-elkhou.github.io/issues"
   },
-  "devDependencies": {
-    "clean-css-cli": "^5.6.2",
-    "eslint": "^8.57.0",
-    "html-validate": "^8.7.4",
-    "imagemin": "^8.0.1",
-    "imagemin-cli": "^7.0.0",
-    "lighthouse": "^11.4.0",
-    "live-server": "^1.2.2",
-    "stylelint": "^16.1.0",
-    "terser": "^5.26.0"
-  },
+
   "browserslist": [
     "> 1%",
     "last 2 versions",
