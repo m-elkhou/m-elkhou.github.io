@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Mohammed EL-KHOU - Expert Data Engineer & Cloud Architect specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture. 5+ years of enterprise experience in Paris, France.">
+    <meta name="keywords" content="Data Science, AI, Machine Learning, Computer Vision, Deep Learning, NLP, ASR, Python, TensorFlow, PyTorch, PhD, Research, Portfolio">
+    <meta name="author" content="Mohammed EL-KHOU">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://m-elkhou.github.io/">
+    <meta property="og:title" content="Mohammed EL-KHOU - Data Engineer & Cloud Architect">
+    <meta property="og:description" content="Expert Data Engineer & Cloud Architect specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture.">
+    <meta property="og:image" content="https://m-elkhou.github.io/images/m_elkhou.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Mohammed EL-KHOU Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://m-elkhou.github.io/">
+    <meta property="twitter:title" content="Mohammed EL-KHOU - Data Engineer & Cloud Architect">
+    <meta property="twitter:description" content="Expert Data Engineer & Cloud Architect specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture.">
+    <meta property="twitter:image" content="https://m-elkhou.github.io/images/m_elkhou.jpg">
+    <meta property="twitter:creator" content="@m_elkhou">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <title>Mohammed EL-KHOU - Expert Data Engineer & Cloud Architect | AWS & Big Data Specialist</title>
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/ab.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/ab.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/ab.png">
+    <link rel="mask-icon" href="images/ab.png" color="#00d4ff">
+    <meta name="msapplication-TileColor" content="#0a0a0a">
+    <meta name="msapplication-TileImage" content="images/ab.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="M.ELKHOU">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="M.ELKHOU Portfolio">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical CSS (inlined for performance) -->
+    <style>
+        /* CSS Variables */
+        :root {
+          --bg-primary: #0a0a0a;
+          --bg-secondary: #0f0f0f;
+          --bg-tertiary: #141414;
+          --bg-card: #1a1a1a;
+          --bg-hover: #202020;
+          --bg-glass: rgba(26, 26, 26, 0.8);
+          --text-primary: #ffffff;
+          --text-secondary: #e0e0e0;
+          --text-tertiary: #b3b3b3;
+          --accent-primary: #00d4ff;
+          --accent-secondary: #0099cc;
+          --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+          --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          --spacing-xs: 0.25rem;
+          --spacing-sm: 0.5rem;
+          --spacing-md: 1rem;
+          --spacing-lg: 1.5rem;
+          --spacing-xl: 2rem;
+          --spacing-xxl: 4rem;
+          --border-color: #2a2a2a;
+          --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+          --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+          --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          --radius-sm: 0.5rem;
+          --radius-md: 0.75rem;
+          --radius-lg: 1rem;
+          --radius-xl: 1.5rem;
+          --radius-full: 9999px;
+        }
+        
+        /* Critical CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+          font-family: var(--font-primary);
+          background-color: var(--bg-primary);
+          color: var(--text-primary);
+          line-height: 1.6;
+          overflow-x: hidden;
+        }
+        .loading-screen {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--bg-primary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+        }
+        .loader {
+          width: 60px;
+          height: 60px;
+          border: 3px solid #333;
+          border-radius: 50%;
+          border-top-color: var(--accent-primary);
+          animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(10, 10, 10, 0.95);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid #333;
+          z-index: 1000;
+          height: 70px;
+        }
+        .hero {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          padding-top: 70px;
+        }
+    </style>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/modern-style.css?v=2024">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed EL-KHOU",
+      "jobTitle": "Data Engineer & Cloud Architect",
+      "description": "Expert Data Engineer & Cloud Architect specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture",
+      "url": "https://m-elkhou.github.io",
+      "image": "https://m-elkhou.github.io/images/m_elkhou.jpg",
+      "email": "m.elkhou@hotmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "France"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Sorbonne Paris Nord University"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Sidi Mohamed ben Abdellah University"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "RMC BFM ADS (Altice Media)"
+      },
+      "sameAs": [
+        "https://github.com/m-elkhou",
+        "https://www.linkedin.com/in/m-elkhou/",
+        "https://twitter.com/m_elkhou"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-text">M</span>
+                    <span class="brand-name">elkhou</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <i class="fas fa-code"></i>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">
+                            <i class="fas fa-folder-open"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+            <canvas id="neural-network" class="neural-network-canvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up">
+                <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-cloud"></i>
+                    <span>Data Engineer & Cloud Architect</span>
+                </div>
+                <p class="hero-greeting" data-aos="fade-up" data-aos-delay="200">Hello, I'm</p>
+                <h1 class="hero-name" data-aos="fade-up" data-aos-delay="300">
+                    <span class="name-first">Mohammed</span>
+                    <span class="name-last">EL-KHOU</span>
+                </h1>
+                <div class="hero-title" data-aos="fade-up" data-aos-delay="400">
+                    <span class="title-prefix">Expert</span>
+                    <span class="typing-text">Data Engineer</span>
+                </div>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="500">
+                    Transforming complex data ecosystems through advanced Big Data engineering and cloud architecture. 
+                    Specialized in <strong>AWS Cloud Solutions</strong>, <strong>Big Data Processing</strong>, <strong>ETL Pipelines</strong>, 
+                    and <strong>Data Warehouse Architecture</strong> with 5+ years of enterprise experience.
+                </p>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Research Papers</span>
+                    </div>
+                </div>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                    <a href="#contact" class="btn btn-primary btn-glow">
+                        <i class="fas fa-rocket"></i>
+                        <span>Let's Collaborate</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="https://drive.google.com/file/d/11Rcy_J3zfErbsgQcAbQGsLGP6zWf-wMf/view" 
+                       class="btn btn-secondary btn-glass" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>View Resume</span>
+                    </a>
+                    <a href="https://github.com/m-elkhou" class="btn btn-tertiary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <div class="hero-social" data-aos="fade-up" data-aos-delay="800">
+                    <a href="https://www.linkedin.com/in/m-elkhou/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/m-elkhou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/m_elkhou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC3xpodcdVYd-h_KS2zaW41Q" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+                <div class="image-container">
+                    <div class="image-frame">
+                        <img src="images/m_elkhou.jpg" alt="Mohammed EL-KHOU - Data Engineer and Cloud Architect" class="profile-image" loading="eager">
+                        <div class="image-overlay"></div>
+                        <div class="image-glow"></div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-icon" data-icon="python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="floating-icon" data-icon="ai">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="floating-icon" data-icon="data">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="floating-icon" data-icon="vision">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="900">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="hero-achievements" data-aos="fade-up" data-aos-delay="1000">
+            <div class="achievement">
+                <i class="fas fa-university"></i>
+                <span>PhD Student at USMBA</span>
+            </div>
+            <div class="achievement">
+                <i class="fas fa-briefcase"></i>
+                <span>Computer Vision Engineer</span>
+            </div>
+            <div class="achievement">
+                <i class="fas fa-award"></i>
+                <span>10+ Certifications</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-description">
+                        <p class="lead">
+                            I am a passionate <strong>Data Engineer and Cloud Architect</strong> with over 5 years of experience 
+                            in designing and implementing enterprise-scale data solutions. My expertise spans across 
+                            <strong>Big Data Engineering</strong>, <strong>Cloud Architecture</strong>, <strong>ETL Pipeline Development</strong>, 
+                            and <strong>Data Warehouse Management</strong>.
+                        </p>
+                        <p>
+                            Currently working as a <strong>Data Engineer / Cloud Engineer (AWS)</strong> at 
+                            <strong>RMC BFM ADS (Altice Media)</strong> in Paris, France. I specialize in building scalable 
+                            data infrastructure, optimizing ETL processes, and implementing cloud-native solutions 
+                            that process millions of data points daily for media and advertising analytics.
+                        </p>
+                        <p>
+                            Previously served as a <strong>Big Data Engineer</strong> at <strong>BPCE-SI</strong>, where I 
+                            architected and maintained Hadoop-based data lakes, developed Spark/Scala applications, 
+                            and led the migration from Cloudera to Google Cloud Platform. My work combines cutting-edge 
+                            technology with practical business solutions, ensuring robust and cost-effective data systems.
+                        </p>
+                        <p>
+                            I am committed to advancing the field of AI through innovative research, collaborative 
+                            projects, and knowledge sharing. My goal is to bridge the gap between academic research 
+                            and real-world applications, creating AI solutions that make a meaningful impact.
+                        </p>
+                    </div>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <span class="info-label">Name:</span>
+                                <span class="info-value">Mohammed EL-KHOU</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location:</span>
+                                <span class="info-value">Paris, France</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="info-label">Email:</span>
+                                <span class="info-value">m.elkhou@hotmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <span class="info-label">GitHub:</span>
+                                <span class="info-value">github.com/m-elkhou</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="30">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Research Papers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Education Timeline -->
+                <div class="timeline-section" data-aos="fade-right">
+                    <h3 class="timeline-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2020 - Present</div>
+                            <h4>Ph.D. Student in Data Sciences</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-university"></i>
+                                Sidi Mohamed ben Abdellah University
+                            </p>
+                            <div class="timeline-description">
+                                <p><strong>LISAC Laboratory</strong> (former LIIAN) - Advanced research in AI and Data Sciences</p>
+                                <ul>
+                                    <li>Conducting cutting-edge research at the intersection of Computer Vision and Automatic Speech Recognition</li>
+                                    <li>Developing novel deep learning architectures for multimodal AI systems</li>
+                                    <li>Published 3 peer-reviewed papers in international conferences</li>
+                                    <li>Supervising undergraduate students in AI and ML projects</li>
+                                    <li>Collaborating with international research teams on joint publications</li>
+                                </ul>
+                                <p><strong>Supervisor:</strong> Prof. Jamal RIFFI</p>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">Deep Learning</span>
+                                <span class="tech-badge">Computer Vision</span>
+                                <span class="tech-badge">ASR</span>
+                                <span class="tech-badge">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2019 - 2020</div>
+                            <h4>Master 2 in Data Science and AI</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-university"></i>
+                                Sorbonne Paris Nord University, France
+                            </p>
+                            <div class="timeline-description">
+                                <p><strong>Specialization:</strong> Advanced Data Science and Artificial Intelligence</p>
+                                <ul>
+                                    <li>Advanced machine learning algorithms and deep learning architectures</li>
+                                    <li>Statistical modeling and data mining techniques</li>
+                                    <li>Big data processing and distributed computing</li>
+                                    <li>AI ethics and responsible machine learning</li>
+                                    <li><strong>Thesis:</strong> "Deep Learning Approaches for Computer Vision Applications"</li>
+                                </ul>
+                                <p><strong>Grade:</strong> Magna Cum Laude (17.5/20)</p>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">Machine Learning</span>
+                                <span class="tech-badge">Deep Learning</span>
+                                <span class="tech-badge">Statistics</span>
+                                <span class="tech-badge">Big Data</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2018 - 2020</div>
+                            <h4>Master in Web Intelligence & Data Science</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-university"></i>
+                                Sidi Mohamed Ben Abdellah University, Morocco
+                            </p>
+                            <div class="timeline-description">
+                                <p><strong>Double Degree Program</strong> in partnership with Sorbonne Paris Nord University</p>
+                                <ul>
+                                    <li>Web intelligence and semantic web technologies</li>
+                                    <li>Data science methodologies and applications</li>
+                                    <li>Information retrieval and text mining</li>
+                                    <li>Web analytics and user behavior analysis</li>
+                                    <li>Cross-cultural academic experience between Morocco and France</li>
+                                </ul>
+                                <p><strong>Grade:</strong> Distinction (16.8/20)</p>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">Web Intelligence</span>
+                                <span class="tech-badge">Data Science</span>
+                                <span class="tech-badge">Text Mining</span>
+                                <span class="tech-badge">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Timeline -->
+                <div class="timeline-section" data-aos="fade-left">
+                    <h3 class="timeline-title">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Jan 2024 - Present</div>
+                            <h4>Data Engineer / Cloud Engineer (AWS)</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                RMC BFM ADS (Altice Media) - Paris, France
+                            </p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Architected serverless video transcoding platform processing 1000+ ads daily with AWS Lambda, FFmpeg, and OpenCV</li>
+                                    <li>Developed automated billing reconciliation system using AWS Textract OCR and API integrations (AppNexus, FreeWheel)</li>
+                                    <li>Built audio-to-video conversion pipeline with AI transcription using AWS Transcribe for campaign content</li>
+                                    <li>Migrated legacy Talend ETL to Python-based architecture, reducing processing time by 80%</li>
+                                    <li>Implemented comprehensive AWS monitoring and cost optimization pipeline saving 40% on cloud expenses</li>
+                                    <li>Managed multi-database environments (AWS Athena, Oracle, PostgreSQL, SQL Server, Salesforce)</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">AWS</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Lambda</span>
+                                <span class="tech-badge">Athena</span>
+                                <span class="tech-badge">S3</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">ETL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Aug 2022 - Jan 2024</div>
+                            <h4>Big Data Engineer</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                BPCE-SI - Lille, France
+                            </p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Designed and maintained Big Data pipelines for Caisse d'Epargne Ile de France using Cloudera Hadoop ecosystem</li>
+                                    <li>Developed ETL processes with Spark/Scala and PySpark for data lake management (HDFS, Hive)</li>
+                                    <li>Led migration from Cloudera to Google Cloud Platform (BigQuery) with dual-run architecture</li>
+                                    <li>Implemented data governance policies ensuring 99.9% data quality and accuracy</li>
+                                    <li>Optimized Big Data solutions achieving 60% performance improvement and 30% cost reduction</li>
+                                    <li>Collaborated with data scientists and analysts using Agile/Scrum methodologies</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">Hadoop</span>
+                                <span class="tech-badge">Spark</span>
+                                <span class="tech-badge">Scala</span>
+                                <span class="tech-badge">PySpark</span>
+                                <span class="tech-badge">GCP</span>
+                                <span class="tech-badge">BigQuery</span>
+                                <span class="tech-badge">Hive</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Sep 2021 - Aug 2022</div>
+                            <h4>R&D Data Engineer / Machine Learning Engineer</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                IMPERIUM - Casablanca, Morocco
+                            </p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Modernized AI infrastructure implementing microservices architecture with Docker and Kubernetes</li>
+                                    <li>Restructured ML training pipelines from Jupyter notebooks to production-ready OOP architecture</li>
+                                    <li>Implemented multiprocessing and GPU parallelization achieving near real-time predictions</li>
+                                    <li>Built end-to-end web mining platform with Scrapy, BeautifulSoup, and PostgreSQL</li>
+                                    <li>Developed desktop applications using PyQt5 for internal operational efficiency</li>
+                                    <li>Automated deployment workflows using Airflow and Kubernetes orchestration</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Kubernetes</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Airflow</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">PyQt5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Aug 2020 - Sep 2021</div>
+                            <h4>ML/AI Developer</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                3W Media - Imperium, Casablanca, Morocco
+                            </p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Developed multilingual speech transcription system supporting 17 languages and dialects</li>
+                                    <li>Built audio fingerprinting solution for advertising spot identification in TV/radio streams</li>
+                                    <li>Created gender and speaker detection system for media monitoring and equality analysis</li>
+                                    <li>Implemented topic detection and sentiment analysis for social media content in French</li>
+                                    <li>Developed comprehensive face recognition pipeline with age, gender, emotion, and race analysis</li>
+                                    <li>Built multilingual dictionary system using WordNet and Solr search engine</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">Keras</span>
+                                <span class="tech-badge">OpenCV</span>
+                                <span class="tech-badge">NLTK</span>
+                                <span class="tech-badge">Elasticsearch</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Mar 2020 - Aug 2020</div>
+                            <h4>Data Scientist Intern</h4>
+                            <p class="timeline-company">
+                                <i class="fas fa-building"></i>
+                                3W Media - Imperium, Casablanca, Morocco
+                            </p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Conducted comprehensive research on object detection algorithms for advertising analysis</li>
+                                    <li>Performed comparative study of YOLO, RetinaNet, Faster R-CNN, and Mask R-CNN architectures</li>
+                                    <li>Developed end-to-end pipeline from data scraping to production deployment</li>
+                                    <li>Implemented data augmentation strategies for object detection problems</li>
+                                    <li>Trained and deployed Flask API for model consumption in production environment</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-tech">
+                                <span class="tech-badge">PyTorch</span>
+                                <span class="tech-badge">YOLO</span>
+                                <span class="tech-badge">RetinaNet</span>
+                                <span class="tech-badge">Flask</span>
+                                <span class="tech-badge">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">My technical expertise</p>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Technical Skills -->
+                <div class="skills-category" data-aos="fade-up">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <div class="skill-description">PySpark, Pandas, NumPy, Flask, SQLAlchemy</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="98%"></div>
+                                </div>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Scala</h4>
+                                <div class="skill-description">Spark, Functional Programming, Big Data</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQL & Databases</h4>
+                                <div class="skill-description">Oracle, PostgreSQL, MySQL, SQL Server</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Java</h4>
+                                <div class="skill-description">Enterprise Applications, Spring Framework</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & Big Data Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="50">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        Cloud & Big Data
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Amazon Web Services</h4>
+                                <div class="skill-description">Lambda, S3, Athena, EC2, Glue, CloudWatch</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Big Data Stack</h4>
+                                <div class="skill-description">Hadoop, Spark, Hive, HDFS, Kafka</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Google Cloud Platform</h4>
+                                <div class="skill-description">BigQuery, Cloud Storage, Dataflow</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>ETL & Data Pipelines</h4>
+                                <div class="skill-description">Airflow, Talend, Custom Python ETL</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="96%"></div>
+                                </div>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI/ML Skills -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        AI & Machine Learning
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Machine Learning</h4>
+                                <div class="skill-description">Supervised, Unsupervised, Reinforcement Learning</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="96%"></div>
+                                </div>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Deep Learning</h4>
+                                <div class="skill-description">CNN, RNN, LSTM, Transformers, GANs</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="94%"></div>
+                                </div>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Computer Vision</h4>
+                                <div class="skill-description">Object Detection, Image Segmentation, OCR</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>NLP & ASR</h4>
+                                <div class="skill-description">BERT, GPT, Speech Recognition, Text Analysis</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Frameworks -->
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Tools & Frameworks
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-item">
+                            <img src="images/tools/tensorflow.svg" alt="TensorFlow" class="tool-logo">
+                            <span class="tool-name">TensorFlow</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="images/tools/torch.svg" alt="PyTorch" class="tool-logo">
+                            <span class="tool-name">PyTorch</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="images/tools/opencv.svg" alt="OpenCV" class="tool-logo">
+                            <span class="tool-name">OpenCV</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="images/tools/flask.svg" alt="Flask" class="tool-logo">
+                            <span class="tool-name">Flask</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="images/tools/git.svg" alt="Git" class="tool-logo">
+                            <span class="tool-name">Git</span>
+                        </div>
+                        <div class="tool-item">
+                            <img src="images/tools/colab.svg" alt="Google Colab" class="tool-logo">
+                            <span class="tool-name">Google Colab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card featured" data-aos="fade-up">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-image">
+                        <img src="images/computer_vision.jpeg" alt="AI-Powered Skin Lesion Detection System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/Image_Mining" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View documentation">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-microscope"></i>
+                                Medical AI
+                            </div>
+                            <div class="project-status">Production</div>
+                        </div>
+                        <h3 class="project-title">AI-Powered Skin Lesion Detection System</h3>
+                        <p class="project-description">
+                            Revolutionary deep learning system for early detection and classification of skin lesions 
+                            with 97.3% accuracy. Implemented advanced CNN architectures with attention mechanisms 
+                            for precise medical image analysis, potentially saving lives through early diagnosis.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-bullseye"></i>
+                                <span>97.3% Accuracy</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time Processing</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-award"></i>
+                                <span>Published Research</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">ResNet</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="images/media.png" alt="Real-time Brand Logo Detection System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/Object-Detection" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View case study">
+                                    <i class="fas fa-chart-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-tv"></i>
+                                Computer Vision
+                            </div>
+                            <div class="project-status">Live</div>
+                        </div>
+                        <h3 class="project-title">Real-time Brand Logo Detection System</h3>
+                        <p class="project-description">
+                            Enterprise-grade real-time detection and recognition system for advertising brand logos 
+                            on TV streams. Processes 30+ FPS with 95% accuracy using optimized YOLO architecture 
+                            and custom training pipeline. Currently deployed in production serving millions of viewers.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>30+ FPS</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-users"></i>
+                                <span>1M+ Users</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-server"></i>
+                                <span>Production Ready</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">YOLOv8</span>
+                            <span class="tech-tag">RetinaNet</span>
+                            <span class="tech-tag">Faster R-CNN</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="images/facialexpression.png" alt="Advanced Emotion Recognition System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/Facial_Expression_Detection" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Try live demo">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Read paper">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-smile"></i>
+                                Emotion AI
+                            </div>
+                            <div class="project-status">Research</div>
+                        </div>
+                        <h3 class="project-title">Advanced Emotion Recognition System</h3>
+                        <p class="project-description">
+                            State-of-the-art deep learning system for real-time facial expression recognition 
+                            and emotion classification. Achieves 94.2% accuracy across 7 emotion categories 
+                            using custom CNN architecture with attention mechanisms and data augmentation.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-brain"></i>
+                                <span>7 Emotions</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-video"></i>
+                                <span>Real-time</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile Ready</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WebRTC</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="images/nlp.jpg" alt="Intelligent Web Mining & Topic Discovery Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/Web_Mining" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View dashboard">
+                                    <i class="fas fa-chart-bar"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="API documentation">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-language"></i>
+                                NLP & Mining
+                            </div>
+                            <div class="project-status">Beta</div>
+                        </div>
+                        <h3 class="project-title">Intelligent Web Mining & Topic Discovery</h3>
+                        <p class="project-description">
+                            Comprehensive NLP platform for intelligent web scraping, content analysis, and 
+                            automatic topic discovery from large text corpora. Features advanced sentiment analysis, 
+                            entity recognition, and trend detection with interactive visualization dashboard.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-globe"></i>
+                                <span>Multi-language</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-database"></i>
+                                <span>Big Data</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Python</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">Scrapy</span>
+                            <span class="tech-tag">LDA</span>
+                            <span class="tech-tag">Elasticsearch</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="images/asr.png" alt="Advanced Speech Recognition System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/ASR-System" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Try demo">
+                                    <i class="fas fa-microphone"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Research paper">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-microphone-alt"></i>
+                                Speech AI
+                            </div>
+                            <div class="project-status">Research</div>
+                        </div>
+                        <h3 class="project-title">Multilingual Speech Recognition System</h3>
+                        <p class="project-description">
+                            Advanced automatic speech recognition system supporting multiple languages and dialects. 
+                            Implements transformer-based architecture with attention mechanisms for superior accuracy 
+                            in noisy environments and real-time processing capabilities.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-language"></i>
+                                <span>5 Languages</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-volume-up"></i>
+                                <span>Noise Robust</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-stopwatch"></i>
+                                <span>Real-time</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">PyTorch</span>
+                            <span class="tech-tag">Transformers</span>
+                            <span class="tech-tag">Wav2Vec2</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="images/iot.jpg" alt="IoT Data Analytics Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/m-elkhou/IoT-Analytics" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View source code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live dashboard">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Documentation">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div class="project-category">
+                                <i class="fas fa-wifi"></i>
+                                IoT & Analytics
+                            </div>
+                            <div class="project-status">Active</div>
+                        </div>
+                        <h3 class="project-title">Smart IoT Data Analytics Platform</h3>
+                        <p class="project-description">
+                            Comprehensive IoT data analytics platform for real-time monitoring, predictive maintenance, 
+                            and anomaly detection. Features machine learning-powered insights, automated alerts, 
+                            and scalable architecture handling millions of sensor data points.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-sensors"></i>
+                                <span>1000+ Sensors</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Anomaly Detection</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-cloud"></i>
+                                <span>Cloud Native</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Python</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">InfluxDB</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta" data-aos="fade-up">
+                <div class="cta-content">
+                    <h3>Interested in My Work?</h3>
+                    <p>Explore more projects, research papers, and open-source contributions on my GitHub profile.</p>
+                    <div class="cta-buttons">
+                        <a href="https://github.com/m-elkhou" class="btn btn-primary btn-glow" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                            <span>View All Projects</span>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-handshake"></i>
+                            <span>Let's Collaborate</span>
+                        </a>
+                    </div>
+                    <div class="cta-stats">
+                        <div class="cta-stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Repositories</span>
+                        </div>
+                        <div class="cta-stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Commits</span>
+                        </div>
+                        <div class="cta-stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Stars</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Paris, France</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>m.elkhou@hotmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>(+33) 06 13 43 51 06</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/m-elkhou/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/m-elkhou" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/m_elkhou" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC3xpodcdVYd-h_KS2zaW41Q" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <div class="form-header">
+                        <h3>Send Me a Message</h3>
+                        <p>I'm always interested in new opportunities and collaborations. Let's discuss your project!</p>
+                    </div>
+                    <form id="contact-form" class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-input" required autocomplete="name" aria-describedby="name-help" maxlength="50">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    Your Name
+                                </label>
+                                <div id="name-help" class="sr-only">Enter your full name (2-50 characters, letters only)</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-input" required autocomplete="email" aria-describedby="email-help" maxlength="100">
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    Your Email
+                                </label>
+                                <div id="email-help" class="sr-only">Enter a valid email address</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="subject" name="subject" class="form-input" required aria-describedby="subject-help">
+                                <option value="">Select a topic...</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="consulting">Consulting Services</option>
+                                <option value="research">Research Partnership</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="subject" class="form-label">
+                                <i class="fas fa-tag" aria-hidden="true"></i>
+                                Subject
+                            </label>
+                            <div id="subject-help" class="sr-only">Choose the topic that best describes your inquiry</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="form-input" rows="6" required placeholder="Tell me about your project, requirements, or any questions you have..." aria-describedby="message-help" maxlength="2000" minlength="10"></textarea>
+                            <label for="message" class="form-label">
+                                <i class="fas fa-comment" aria-hidden="true"></i>
+                                Your Message
+                            </label>
+                            <div id="message-help" class="sr-only">Enter your message (10-2000 characters)</div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                            <label for="newsletter" class="checkbox-label">
+                                <span class="checkbox-custom"></span>
+                                Subscribe to my newsletter for AI and data science insights
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-glow btn-full">
+                            <i class="fas fa-rocket"></i>
+                            <span>Send Message</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                        
+                        <div class="form-note">
+                            <i class="fas fa-shield-alt"></i>
+                            Your information is secure and will never be shared with third parties.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" data-aos="fade-up">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Updated with AI & Data Science</h3>
+                    <p>Get the latest insights, research findings, and industry trends delivered to your inbox.</p>
+                </div>
+                <div class="newsletter-form">
+                    <form id="newsletter-form" class="newsletter-form-inner">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Subscribe
+                            </button>
+                        </div>
+                        <div class="newsletter-note">
+                            <i class="fas fa-lock"></i>
+                            No spam, unsubscribe anytime
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-text">M</span>
+                        <span class="brand-name">elkhou</span>
+                    </div>
+                    <p class="brand-description">
+                        Expert Data Engineer & Cloud Architect passionate about transforming 
+                        complex data ecosystems into scalable solutions.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/m-elkhou/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/m-elkhou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/m_elkhou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC3xpodcdVYd-h_KS2zaW41Q" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="mailto:m.elkhou@hotmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home" class="footer-link">Home</a></li>
+                            <li><a href="#about" class="footer-link">About</a></li>
+                            <li><a href="#experience" class="footer-link">Experience</a></li>
+                            <li><a href="#skills" class="footer-link">Skills</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Work</h4>
+                        <ul>
+                            <li><a href="#projects" class="footer-link">Projects</a></li>
+                            <li><a href="https://github.com/m-elkhou" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="#" class="footer-link">Research Papers</a></li>
+                            <li><a href="#" class="footer-link">Publications</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#contact" class="footer-link">Contact</a></li>
+                            <li><a href="https://www.linkedin.com/in/m-elkhou/" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/m_elkhou" class="footer-link" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/11Rcy_J3zfErbsgQcAbQGsLGP6zWf-wMf/view" class="footer-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                            <li><a href="#" class="footer-link">Certifications</a></li>
+                            <li><a href="#" class="footer-link">Tutorials</a></li>
+                            <li><a href="#" class="footer-link">Tools</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Mohammed EL-KHOU. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart pulse"></i> using modern web technologies</p>
+                </div>
+                <div class="footer-meta">
+                    <span class="footer-version">v2.0.0</span>
+                    <span class="footer-status">
+                        <i class="fas fa-circle status-online"></i>
+                        Available for opportunities
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer" nonce="portfolio-2024"></script>
+    <script src="js/modern-script.js" nonce="portfolio-2024"></script>
+    
+    <!-- Performance and Analytics -->
+    <script nonce="portfolio-2024">
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    console.log('Page Performance:', {
+                        'Load Time': Math.round(perfData.loadEventEnd - perfData.loadEventStart) + 'ms',
+                        'DOM Content Loaded': Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart) + 'ms',
+                        'First Paint': Math.round(performance.getEntriesByType('paint')[0]?.startTime || 0) + 'ms'
+                    });
+                }, 0);
+            });
+        }
+        
+        // Remove no-js class
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+        
+        // Force CSS variables check
+        setTimeout(() => {
+            const root = document.documentElement;
+            const accentPrimary = getComputedStyle(root).getPropertyValue('--accent-primary').trim();
+            console.log('CSS Variable Check:', {
+                '--accent-primary': accentPrimary || 'NOT FOUND',
+                'Expected': '#00d4ff'
+            });
+            
+            // Force set if not found
+            if (!accentPrimary || accentPrimary === 'rgb(255, 0, 0)') {
+                root.style.setProperty('--accent-primary', '#00d4ff');
+                root.style.setProperty('--accent-secondary', '#0099cc');
+                root.style.setProperty('--accent-gradient', 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)');
+                console.log('CSS Variables manually set!');
+            }
+        }, 100);
+    </script>
+</body>
+</html>
