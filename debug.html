@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Portfolio Issues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #00d4ff;
+            text-align: center;
+        }
+        .test-section {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+        }
+        .error {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid #ff4444;
+            color: #ff4444;
+        }
+        .info {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+        }
+        code {
+            background: #333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Portfolio Debug Page</h1>
+        
+        <div class="test-section">
+            <h2>File Accessibility Tests</h2>
+            <div id="file-tests"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>CSS Loading Test</h2>
+            <div id="css-test"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>JavaScript Loading Test</h2>
+            <div id="js-test"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>External Resources Test</h2>
+            <div id="external-test"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Browser Information</h2>
+            <div id="browser-info"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Quick Actions</h2>
+            <a href="index.html" class="btn">Go to Main Portfolio</a>
+            <a href="test.html" class="btn">Go to Test Page</a>
+            <button onclick="location.reload()" class="btn">Reload Debug</button>
+        </div>
+    </div>
+
+    <script>
+        // File accessibility tests
+        function testFileAccess() {
+            const files = [
+                'css/modern-style.css',
+                'js/modern-script.js',
+                'images/m_elkhou.jpg',
+                'manifest.json'
+            ];
+            
+            const container = document.getElementById('file-tests');
+            
+            files.forEach(file => {
+                fetch(file)
+                    .then(response => {
+                        const result = document.createElement('div');
+                        result.className = response.ok ? 'test-result success' : 'test-result error';
+                        result.innerHTML = `<strong>${file}</strong>: ${response.ok ? '✅ Accessible' : '❌ Not Found'} (${response.status})`;
+                        container.appendChild(result);
+                    })
+                    .catch(error => {
+                        const result = document.createElement('div');
+                        result.className = 'test-result error';
+                        result.innerHTML = `<strong>${file}</strong>: ❌ Error - ${error.message}`;
+                        container.appendChild(result);
+                    });
+            });
+        }
+        
+        // CSS loading test
+        function testCSS() {
+            const container = document.getElementById('css-test');
+            const testElement = document.createElement('div');
+            testElement.style.cssText = 'color: var(--accent-primary, red); font-size: var(--spacing-md, 16px);';
+            document.body.appendChild(testElement);
+            
+            const computedStyle = window.getComputedStyle(testElement);
+            const color = computedStyle.color;
+            const fontSize = computedStyle.fontSize;
+            
+            document.body.removeChild(testElement);
+            
+            const result = document.createElement('div');
+            result.className = 'test-result info';
+            result.innerHTML = `
+                <strong>CSS Variables Test:</strong><br>
+                --accent-primary: ${color}<br>
+                --spacing-md: ${fontSize}<br>
+                ${color.includes('rgb(0, 212, 255)') || color.includes('#00d4ff') ? '✅ CSS Variables Working' : '⚠️ CSS Variables May Not Be Loading'}
+            `;
+            container.appendChild(result);
+        }
+        
+        // JavaScript test
+        function testJS() {
+            const container = document.getElementById('js-test');
+            const result = document.createElement('div');
+            
+            try {
+                // Test if modern JS features work
+                const testArrow = () => 'ES6 Arrow Functions: ✅';
+                const testTemplate = `Template Literals: ✅`;
+                const testConst = 'Const/Let: ✅';
+                
+                result.className = 'test-result success';
+                result.innerHTML = `
+                    <strong>JavaScript Features:</strong><br>
+                    ${testArrow()}<br>
+                    ${testTemplate}<br>
+                    ${testConst}<br>
+                    Modern JS: ✅ Supported
+                `;
+            } catch (error) {
+                result.className = 'test-result error';
+                result.innerHTML = `<strong>JavaScript Error:</strong> ${error.message}`;
+            }
+            
+            container.appendChild(result);
+        }
+        
+        // External resources test
+        function testExternalResources() {
+            const container = document.getElementById('external-test');
+            const resources = [
+                'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css'
+            ];
+            
+            resources.forEach(url => {
+                fetch(url, { mode: 'no-cors' })
+                    .then(() => {
+                        const result = document.createElement('div');
+                        result.className = 'test-result success';
+                        result.innerHTML = `<strong>External Resource:</strong> ✅ ${url.split('/').pop()}`;
+                        container.appendChild(result);
+                    })
+                    .catch(error => {
+                        const result = document.createElement('div');
+                        result.className = 'test-result error';
+                        result.innerHTML = `<strong>External Resource:</strong> ❌ ${url.split('/').pop()} - ${error.message}`;
+                        container.appendChild(result);
+                    });
+            });
+        }
+        
+        // Browser information
+        function showBrowserInfo() {
+            const container = document.getElementById('browser-info');
+            const info = document.createElement('div');
+            info.className = 'test-result info';
+            info.innerHTML = `
+                <strong>Browser Information:</strong><br>
+                User Agent: <code>${navigator.userAgent}</code><br>
+                Viewport: ${window.innerWidth}x${window.innerHeight}<br>
+                Screen: ${screen.width}x${screen.height}<br>
+                Color Depth: ${screen.colorDepth}bit<br>
+                Language: ${navigator.language}<br>
+                Online: ${navigator.onLine ? '✅' : '❌'}<br>
+                Cookies Enabled: ${navigator.cookieEnabled ? '✅' : '❌'}<br>
+                Local Storage: ${typeof(Storage) !== "undefined" ? '✅' : '❌'}<br>
+                Service Worker: ${('serviceWorker' in navigator) ? '✅' : '❌'}
+            `;
+            container.appendChild(info);
+        }
+        
+        // Run all tests
+        document.addEventListener('DOMContentLoaded', () => {
+            testFileAccess();
+            testCSS();
+            testJS();
+            testExternalResources();
+            showBrowserInfo();
+        });
+    </script>
+</body>
+</html>
