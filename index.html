@@ -5,70 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed EL-KHOU - Data Engineer & Cloud Architect</title>
     <style>
-        :root {
-            --bg-primary: #0a0a0a;
-            --text-primary: #ffffff;
-            --accent-primary: #00d4ff;
-            --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
-        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            background: #0a0a0a;
+            color: #ffffff;
             line-height: 1.6;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        .hero {
             text-align: center;
+            padding: 2rem;
+            background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
         }
-        .hero h1 {
-            font-size: 3rem;
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin-bottom: 1rem;
-            background: var(--accent-gradient);
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .hero p {
+        .hero-content p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            max-width: 600px;
         }
         .btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: var(--accent-gradient);
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
             color: white;
             text-decoration: none;
             border-radius: 0.5rem;
             margin: 0.5rem;
             transition: transform 0.3s ease;
+            font-weight: 600;
         }
         .btn:hover {
             transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+        }
+        .btn-secondary:hover {
+            background: #00d4ff;
+            color: white;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .skill-item {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid #333;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+        }
+        .skill-item h3 {
+            color: #00d4ff;
+            margin-bottom: 1rem;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .contact-info a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .navbar {
+                padding: 1rem;
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
+    <nav class="navbar">
+        <div class="nav-brand">M.ELKHOU</div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
             <h1>Mohammed EL-KHOU</h1>
-            <p>Expert Data Engineer & Cloud Architect</p>
-            <p>Specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture</p>
-            <a href="mailto:m.elkhou@hotmail.com" class="btn">Contact Me</a>
-            <a href="https://github.com/m-elkhou" class="btn" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/m-elkhou/" class="btn" target="_blank">LinkedIn</a>
+            <p>Expert Data Engineer & Cloud Architect specializing in AWS, Big Data, ETL Pipelines, and Data Warehouse Architecture with 5+ years of enterprise experience in Paris, France.</p>
+            <a href="#about" class="btn">Learn More</a>
+            <a href="mailto:m.elkhou@hotmail.com" class="btn btn-secondary">Contact Me</a>
         </div>
-    </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>I am a passionate Data Engineer and Cloud Architect with over 5 years of experience in designing and implementing enterprise-scale data solutions.</p>
+                <p>Currently working as a Data Engineer / Cloud Engineer (AWS) at RMC BFM ADS (Altice Media) in Paris, France. I specialize in building scalable data infrastructure, optimizing ETL processes, and implementing cloud-native solutions.</p>
+            </div>
+            <div class="about-text">
+                <p>Previously served as a Big Data Engineer at BPCE-SI, where I architected and maintained Hadoop-based data lakes, developed Spark/Scala applications, and led the migration from Cloudera to Google Cloud Platform.</p>
+                <p>My expertise spans across Big Data Engineering, Cloud Architecture, ETL Pipeline Development, and Data Warehouse Management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Cloud Platforms</h3>
+                <p>AWS (Lambda, S3, Athena, EC2, Glue), Google Cloud Platform (BigQuery, Cloud Storage, Dataflow)</p>
+            </div>
+            <div class="skill-item">
+                <h3>Big Data</h3>
+                <p>Hadoop, Spark, Hive, HDFS, Kafka, PySpark, Scala</p>
+            </div>
+            <div class="skill-item">
+                <h3>Programming</h3>
+                <p>Python, Scala, Java, SQL, JavaScript</p>
+            </div>
+            <div class="skill-item">
+                <h3>Data Engineering</h3>
+                <p>ETL Pipelines, Airflow, Talend, Data Warehousing, Data Lakes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <p>Let's work together on your next data project!</p>
+            <div style="margin-top: 2rem;">
+                <a href="mailto:m.elkhou@hotmail.com">📧 m.elkhou@hotmail.com</a>
+                <a href="https://www.linkedin.com/in/m-elkhou/" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/m-elkhou" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
