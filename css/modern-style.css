@@ -421,7 +421,6 @@ body {
   border-radius: 50%;
   padding: 8px;
   background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
-  animation: rotate 20s linear infinite;
 }
 
 .profile-image {
