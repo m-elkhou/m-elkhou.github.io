@@ -622,12 +622,12 @@ section {
 
 .timeline-item:nth-child(odd) .timeline-content {
   margin-left: 0;
-  margin-right: 55%;
-  text-align: right;
+  margin-right: 45%;
+  text-align: left;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-  margin-left: 55%;
+  margin-left: 45%;
   margin-right: 0;
   text-align: left;
 }
@@ -652,6 +652,7 @@ section {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  width: 55%;
 }
 
 .timeline-content:hover {
