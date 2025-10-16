@@ -154,7 +154,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="stylesheet" href="css/modern-style.css?v=2024">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -1658,6 +1658,24 @@
         // Remove no-js class
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js');
+        
+        // Force CSS variables check
+        setTimeout(() => {
+            const root = document.documentElement;
+            const accentPrimary = getComputedStyle(root).getPropertyValue('--accent-primary').trim();
+            console.log('CSS Variable Check:', {
+                '--accent-primary': accentPrimary || 'NOT FOUND',
+                'Expected': '#00d4ff'
+            });
+            
+            // Force set if not found
+            if (!accentPrimary || accentPrimary === 'rgb(255, 0, 0)') {
+                root.style.setProperty('--accent-primary', '#00d4ff');
+                root.style.setProperty('--accent-secondary', '#0099cc');
+                root.style.setProperty('--accent-gradient', 'linear-gradient(135deg, #00d4ff 0%, #0099cc 100%)');
+                console.log('CSS Variables manually set!');
+            }
+        }, 100);
     </script>
 </body>
 </html>
