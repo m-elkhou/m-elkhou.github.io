@@ -1,0 +1,46 @@
+{
+  "name": "mohammed-elkhou-portfolio",
+  "version": "2.0.0",
+  "description": "Modern portfolio website for Mohammed EL-KHOU - Data Scientist & AI Engineer",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "test": "echo \"Portfolio ready\""
+  },
+  "keywords": [
+    "portfolio",
+    "data-science",
+    "ai",
+    "machine-learning",
+    "computer-vision",
+    "web-development",
+    "responsive",
+    "dark-theme",
+    "modern"
+  ],
+  "author": {
+    "name": "Mohammed EL-KHOU",
+    "email": "m.elkhou@hotmail.com",
+    "url": "https://github.com/m-elkhou"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m-elkhou/m-elkhou.github.io.git"
+  },
+  "homepage": "https://m-elkhou.github.io",
+  "bugs": {
+    "url": "https://github.com/m-elkhou/m-elkhou.github.io/issues"
+  },
+
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
