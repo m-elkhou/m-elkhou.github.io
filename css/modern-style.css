@@ -1133,6 +1133,75 @@ section {
   font-weight: 500;
 }
 
+/* Detailed Project Cards */
+.project-category-section {
+  margin-bottom: var(--space-xxl);
+}
+
+.project-category-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.detailed-card {
+  min-height: auto;
+}
+
+.detailed-card .project-content {
+  padding: var(--space-xl);
+}
+
+.project-details {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.project-details h4 {
+  color: var(--accent-color);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.project-details h4:first-child {
+  margin-top: 0;
+}
+
+.project-details ul {
+  list-style: none;
+  margin-bottom: var(--space-md);
+}
+
+.project-details li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.project-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-details strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* Contact Section */
 .contact {
   background: var(--secondary-bg);

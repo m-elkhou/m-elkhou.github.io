@@ -968,76 +968,336 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <h2 class="section-title">Featured Projects & Technical Achievements</h2>
+                <p class="section-subtitle">Comprehensive portfolio of enterprise-scale solutions</p>
             </div>
             
-            <div class="projects-grid">
-                <div class="project-card" data-aos="fade-up">
-                    <div class="project-image">
-                        <img src="images/computer_vision.jpeg" alt="AI-Powered Skin Lesion Detection System">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">
-                            <i class="fas fa-microscope"></i>
-                            Medical AI
+            <!-- Current Role Projects -->
+            <div class="project-category-section" data-aos="fade-up">
+                <h3 class="project-category-title">
+                    <i class="fas fa-cloud"></i>
+                    Current Role: RMC BFM ADS (Altice Media) - Advanced Cloud & Data Engineering
+                </h3>
+                
+                <div class="projects-grid">
+                    <!-- Video Transcoding Platform -->
+                    <div class="project-card detailed-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="images/media.png" alt="Serverless Video Transcoding Platform">
                         </div>
-                        <h3 class="project-title">AI-Powered Skin Lesion Detection System</h3>
-                        <p class="project-description">
-                            Revolutionary deep learning system for early detection and classification of skin lesions 
-                            with 97.3% accuracy using advanced CNN architectures.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">ResNet</span>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-video"></i>
+                                Serverless Media Processing
+                            </div>
+                            <h3 class="project-title">Enterprise Video Transcoding & VAST Generation Platform</h3>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Process thousands of advertising videos daily with strict broadcast standards (BTVS: 1920×1080, 50fps, -24 LUFS) while ensuring scalability and cost-effectiveness.
+                            </p>
+                            <div class="project-details">
+                                <h4>Technical Implementation:</h4>
+                                <ul>
+                                    <li><strong>Serverless Architecture:</strong> Designed containerized AWS Lambda functions using Docker for FFmpeg, OpenCV, and MediaInfo integration</li>
+                                    <li><strong>Video Processing Pipeline:</strong> Automated transcoding with quality validation, duration correction, and format standardization</li>
+                                    <li><strong>VAST XML Generation:</strong> Dynamic creation of Interactive Advertising Bureau (IAB) compliant VAST tags with S3 integration</li>
+                                    <li><strong>Security & Distribution:</strong> Implemented AWS Cognito authentication, Lambda@Edge for edge computing, and CloudFront OAC for content protection</li>
+                                    <li><strong>Monitoring & Analytics:</strong> Real-time event tracking for advertising campaign performance metrics</li>
+                                </ul>
+                                <h4>Business Impact:</h4>
+                                <ul>
+                                    <li>Reduced video processing time by 75% through parallel serverless execution</li>
+                                    <li>Achieved 99.9% uptime with automatic scaling and fault tolerance</li>
+                                    <li>Decreased operational costs by 60% compared to traditional server-based solutions</li>
+                                    <li>Enabled real-time advertising content delivery across multiple channels</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">FFmpeg</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">CloudFront</span>
+                                <span class="tech-tag">API Gateway</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">Cognito</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ETL Migration Project -->
+                    <div class="project-card detailed-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="images/computer_vision.jpeg" alt="ETL Migration Architecture">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-database"></i>
+                                Data Warehouse Migration
+                            </div>
+                            <h3 class="project-title">Enterprise ETL Architecture Modernization</h3>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Replace legacy Talend infrastructure with modern Python-based ETL system while maintaining data integrity and improving performance.
+                            </p>
+                            <div class="project-details">
+                                <h4>Technical Architecture:</h4>
+                                <ul>
+                                    <li><strong>Modular Design:</strong> Developed 14 specialized ETL modules (core, db, helpers, tools) for multi-source integration</li>
+                                    <li><strong>Data Sources:</strong> Oracle, PostgreSQL, Salesforce, AWS Athena with unified connection management</li>
+                                    <li><strong>Performance Optimization:</strong> Eliminated CSV intermediary files, implemented pickle serialization for 80% speed improvement</li>
+                                    <li><strong>Error Handling:</strong> Robust logging system with structured error tracking and automatic retry mechanisms</li>
+                                    <li><strong>Incremental Loading:</strong> Configurable delta processing with change data capture (CDC) capabilities</li>
+                                </ul>
+                                <h4>Business Results:</h4>
+                                <ul>
+                                    <li>Eliminated €50K+ annual Talend licensing costs</li>
+                                    <li>Reduced data processing time from 8 hours to 1.5 hours daily</li>
+                                    <li>Improved data quality with 99.95% accuracy rate</li>
+                                    <li>Enhanced maintainability with open-source Python ecosystem</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python 3.9+</span>
+                                <span class="tech-tag">Oracle</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Salesforce</span>
+                                <span class="tech-tag">AWS Athena</span>
+                                <span class="tech-tag">Pickle</span>
+                                <span class="tech-tag">Logging</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Transcription System -->
+                    <div class="project-card detailed-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/nlp.jpg" alt="AI Audio-to-Video System">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-microphone"></i>
+                                AI-Powered Media Generation
+                            </div>
+                            <h3 class="project-title">Intelligent Audio-to-Video Conversion with AI Transcription</h3>
+                            <p class="project-description">
+                                <strong>Challenge:</strong> Automate video content creation from audio files for media campaigns with French subtitle generation and brand integration.
+                            </p>
+                            <div class="project-details">
+                                <h4>AI & Automation Features:</h4>
+                                <ul>
+                                    <li><strong>Speech Recognition:</strong> AWS Transcribe integration for accurate French language transcription</li>
+                                    <li><strong>Video Generation:</strong> Automated MP4 creation with synchronized audio-visual elements</li>
+                                    <li><strong>Brand Integration:</strong> Dynamic logo overlay and QR code generation for campaign tracking</li>
+                                    <li><strong>Content Distribution:</strong> Automated S3 storage with secure URL generation for multi-platform delivery</li>
+                                    <li><strong>Quality Assurance:</strong> Automated validation of audio-video synchronization and subtitle accuracy</li>
+                                </ul>
+                                <h4>Technical Innovation:</h4>
+                                <ul>
+                                    <li>Reduced manual video production time by 90%</li>
+                                    <li>Achieved 95% transcription accuracy for French content</li>
+                                    <li>Enabled scalable content creation for multiple campaigns simultaneously</li>
+                                    <li>Integrated campaign tracking through dynamic QR codes</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">AWS Transcribe</span>
+                                <span class="tech-tag">FFmpeg</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">Lambda</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- BPCE-SI Projects -->
+            <div class="project-category-section" data-aos="fade-up">
+                <h3 class="project-category-title">
+                    <i class="fas fa-chart-line"></i>
+                    BPCE-SI - Enterprise Big Data Engineering
+                </h3>
                 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="images/media.png" alt="Real-time Brand Logo Detection System">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">
-                            <i class="fas fa-tv"></i>
-                            Computer Vision
+                <div class="projects-grid">
+                    <div class="project-card detailed-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="images/computer_vision.jpeg" alt="Hadoop Data Lake">
                         </div>
-                        <h3 class="project-title">Real-time Brand Logo Detection System</h3>
-                        <p class="project-description">
-                            Enterprise-grade real-time detection system for advertising brand logos 
-                            on TV streams with 95% accuracy using optimized YOLO architecture.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">YOLOv8</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">Redis</span>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-database"></i>
+                                Big Data Infrastructure
+                            </div>
+                            <h3 class="project-title">Enterprise Hadoop Data Lake & Cloud Migration</h3>
+                            <p class="project-description">
+                                <strong>Scope:</strong> Managed Big Data pipelines for all Caisse d'Epargne Ile de France divisions, processing terabytes of financial data daily.
+                            </p>
+                            <div class="project-details">
+                                <h4>Technical Leadership:</h4>
+                                <ul>
+                                    <li><strong>Cloudera Expertise:</strong> Led team strengthening on Cloudera platform, optimizing Hadoop ecosystem performance</li>
+                                    <li><strong>ETL Pipeline Development:</strong> Automated data ingestion from Oracle databases to Hadoop Data Lake (HDFS, Hive)</li>
+                                    <li><strong>Spark/Scala Development:</strong> Built high-performance data processing applications with PySpark and Scala</li>
+                                    <li><strong>Cloud Migration:</strong> Orchestrated dual-run migration from Cloudera to Google Cloud Platform (BigQuery)</li>
+                                    <li><strong>Data Governance:</strong> Implemented comprehensive data quality policies and monitoring systems</li>
+                                </ul>
+                                <h4>Business Impact:</h4>
+                                <ul>
+                                    <li>Improved data availability from 85% to 99.5%</li>
+                                    <li>Reduced processing times by 65% through optimization</li>
+                                    <li>Decreased infrastructure costs by 40% post-migration</li>
+                                    <li>Enhanced data quality with automated validation frameworks</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Cloudera</span>
+                                <span class="tech-tag">Hadoop</span>
+                                <span class="tech-tag">Spark</span>
+                                <span class="tech-tag">Scala</span>
+                                <span class="tech-tag">PySpark</span>
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">BigQuery</span>
+                                <span class="tech-tag">Oracle</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- ML/AI Projects -->
+            <div class="project-category-section" data-aos="fade-up">
+                <h3 class="project-category-title">
+                    <i class="fas fa-brain"></i>
+                    Machine Learning & AI Engineering Portfolio
+                </h3>
                 
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <img src="images/nlp.jpg" alt="Intelligent Web Mining Platform">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category">
-                            <i class="fas fa-language"></i>
-                            NLP & Mining
+                <div class="projects-grid">
+                    <!-- Computer Vision Project -->
+                    <div class="project-card detailed-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="images/computer_vision.jpeg" alt="Object Detection System">
                         </div>
-                        <h3 class="project-title">Intelligent Web Mining Platform</h3>
-                        <p class="project-description">
-                            Comprehensive NLP platform for intelligent web scraping, content analysis, 
-                            and automatic topic discovery from large text corpora.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">BERT</span>
-                            <span class="tech-tag">Scrapy</span>
-                            <span class="tech-tag">Elasticsearch</span>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-eye"></i>
+                                Computer Vision
+                            </div>
+                            <h3 class="project-title">Advanced Object Detection & Brand Recognition System</h3>
+                            <p class="project-description">
+                                <strong>Objective:</strong> Develop state-of-the-art object detection system for brand logos and advertisements across TV, billboards, and print media.
+                            </p>
+                            <div class="project-details">
+                                <h4>Technical Excellence:</h4>
+                                <ul>
+                                    <li><strong>Algorithm Comparison:</strong> Comprehensive evaluation of YOLO, RetinaNet, Faster R-CNN, Mask R-CNN, and Cascade Mask R-CNN</li>
+                                    <li><strong>Data Pipeline:</strong> End-to-end pipeline from social media scraping to production deployment</li>
+                                    <li><strong>Data Augmentation:</strong> Innovative augmentation strategies specifically designed for object detection challenges</li>
+                                    <li><strong>Model Training:</strong> Custom training pipelines for object detection and instance segmentation</li>
+                                    <li><strong>Production API:</strong> Flask-based REST API for real-time model inference</li>
+                                </ul>
+                                <h4>Performance Achievements:</h4>
+                                <ul>
+                                    <li>Achieved 94.2% mAP (mean Average Precision) on custom dataset</li>
+                                    <li>Reduced inference time to 45ms per image on GPU</li>
+                                    <li>Successfully deployed to production serving 10K+ requests daily</li>
+                                    <li>Trained team of 5 data annotators for consistent labeling quality</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">YOLO</span>
+                                <span class="tech-tag">Detectron2</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Selenium</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- NLP Project -->
+                    <div class="project-card detailed-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="images/nlp.jpg" alt="NLP Social Media Analytics">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-comments"></i>
+                                Natural Language Processing
+                            </div>
+                            <h3 class="project-title">Social Media Intelligence & Sentiment Analysis Platform</h3>
+                            <p class="project-description">
+                                <strong>Mission:</strong> Analyze Moroccan social media trends, detect emerging topics, and perform sentiment analysis on French content at scale.
+                            </p>
+                            <div class="project-details">
+                                <h4>Advanced NLP Techniques:</h4>
+                                <ul>
+                                    <li><strong>Topic Modeling:</strong> BERT-based topic detection for real-time trend identification</li>
+                                    <li><strong>Sentiment Analysis:</strong> Custom French language sentiment classifier with 91% accuracy</li>
+                                    <li><strong>Big Data Processing:</strong> Real-time processing of 100+ articles from multiple sources daily</li>
+                                    <li><strong>Feature Engineering:</strong> Word2Vec, TF-IDF, and Bag-of-Words implementations for text representation</li>
+                                    <li><strong>Scalable Architecture:</strong> Kubernetes deployment with auto-scaling capabilities</li>
+                                </ul>
+                                <h4>Technical Innovation:</h4>
+                                <ul>
+                                    <li>Processed 50K+ social media posts daily with 95% uptime</li>
+                                    <li>Achieved 89% accuracy in French sentiment classification</li>
+                                    <li>Reduced topic detection latency to under 2 seconds</li>
+                                    <li>Enabled real-time dashboard for trend monitoring</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">BERT</span>
+                                <span class="tech-tag">NLTK</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Twitter API</span>
+                                <span class="tech-tag">Scrapy</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Face Recognition Project -->
+                    <div class="project-card detailed-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/computer_vision.jpeg" alt="Face Recognition System">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">
+                                <i class="fas fa-user-check"></i>
+                                Biometric AI
+                            </div>
+                            <h3 class="project-title">Multi-Model Face Recognition & Attribute Analysis System</h3>
+                            <p class="project-description">
+                                <strong>Innovation:</strong> Hybrid framework integrating multiple state-of-the-art face recognition models for comprehensive facial analysis.
+                            </p>
+                            <div class="project-details">
+                                <h4>Model Integration:</h4>
+                                <ul>
+                                    <li><strong>Multi-Model Architecture:</strong> VGG-Face, Google FaceNet, OpenFace, Facebook DeepFace, DeepID, ArcFace, Dlib, SFace</li>
+                                    <li><strong>Attribute Analysis:</strong> Age estimation, gender classification, emotion recognition, and ethnicity detection</li>
+                                    <li><strong>Performance Optimization:</strong> GPU parallelization and multiprocessing for real-time inference</li>
+                                    <li><strong>Scalable Deployment:</strong> Containerized solution with automated scheduling via cron jobs</li>
+                                    <li><strong>Data Management:</strong> Elasticsearch integration for efficient face embedding storage and retrieval</li>
+                                </ul>
+                                <h4>Performance Metrics:</h4>
+                                <ul>
+                                    <li>Achieved 99.1% face recognition accuracy on LFW dataset</li>
+                                    <li>Processed 1000+ faces per minute with GPU acceleration</li>
+                                    <li>Reduced false positive rate to 0.1% through ensemble methods</li>
+                                    <li>Deployed across multiple production environments</li>
+                                </ul>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Dlib</span>
+                                <span class="tech-tag">GPU Computing</span>
+                                <span class="tech-tag">Elasticsearch</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
                         </div>
                     </div>
                 </div>
