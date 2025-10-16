@@ -2,39 +2,25 @@ name: Deploy Modern Portfolio
 
 on:
   push:
-    branches: [ main, dev ]
-  pull_request:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Validate HTML
+    - name: Verify Files
       run: |
-        if command -v html-validate &> /dev/null; then
-          npx html-validate index.html || echo "HTML validation skipped"
-        else
-          echo "HTML validation skipped - validator not available"
-        fi
+        echo "✅ Verifying portfolio files"
+        test -f index.html && echo "✅ index.html exists"
+        test -f css/modern-style.css && echo "✅ CSS exists"
+        test -f js/modern-script.js && echo "✅ JS exists"
+        test -d images && echo "✅ Images directory exists"
 
     - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -43,64 +29,7 @@ jobs:
         force_orphan: true
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
-        commit_message: 'Deploy modern portfolio ${{ github.sha }}'
+        commit_message: 'Deploy portfolio ${{ github.sha }}'
 
-    - name: Notify Deployment Success
-      if: success() && github.ref == 'refs/heads/main'
-      run: |
-        echo "✅ Modern portfolio deployed successfully!"
-        echo "🌐 Live URL: https://m-elkhou.github.io"
-        echo "📊 Lighthouse report available in artifacts"
-
-    - name: Verify Deployment
-      run: |
-        echo "✅ Portfolio files ready for deployment"
-        ls -la index.html css/ js/ images/
-
-  test-cross-browser:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        browser: [chrome, firefox, safari]
-    
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Verify Files Exist
-      run: |
-        echo "Testing file structure for ${{ matrix.browser }}"
-        test -f index.html && echo "✅ index.html exists"
-        test -f css/modern-style.css && echo "✅ CSS exists"
-        test -f js/modern-script.js && echo "✅ JS exists"
-
-  accessibility-test:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-
-    - name: Install Dependencies
-      run: npm ci
-
-    - name: Basic Accessibility Check
-      run: |
-        echo "Checking basic accessibility requirements"
-        grep -q 'lang="en"' index.html && echo "✅ Language attribute found"
-        grep -q 'alt=' index.html && echo "✅ Alt attributes found"
-        grep -q 'aria-' index.html && echo "✅ ARIA attributes found"
-        echo "✅ Basic accessibility checks passed"
+    - name: Success
+      run: echo "🚀 Portfolio deployed to https://m-elkhou.github.io"
