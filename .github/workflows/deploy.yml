@@ -12,12 +12,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
-        publish_branch: gh-pages
-        force_orphan: true
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+    - name: Push to main
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout -b main || git checkout main
+        git push origin main --force
