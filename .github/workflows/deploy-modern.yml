@@ -1,0 +1,170 @@
+name: Deploy Modern Portfolio
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: |
+        npm ci
+        npm install -g lighthouse
+
+    - name: Lint and Validate Code
+      run: |
+        npm run validate:html
+        npm run validate:css
+        npm run validate:js
+
+    - name: Build and Optimize
+      run: |
+        npm run build
+
+    - name: Run Lighthouse CI
+      run: |
+        npm start &
+        sleep 10
+        lighthouse http://localhost:3000/index.html --output=json --output-path=./lighthouse-results.json
+        kill %1
+
+    - name: Upload Lighthouse Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: lighthouse-results
+        path: lighthouse-results.json
+
+    - name: Security Scan
+      uses: securecodewarrior/github-action-add-sarif@v1
+      with:
+        sarif-file: 'security-scan-results.sarif'
+
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages
+        force_orphan: true
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Deploy modern portfolio ${{ github.sha }}'
+
+    - name: Notify Deployment Success
+      if: success() && github.ref == 'refs/heads/main'
+      run: |
+        echo "✅ Modern portfolio deployed successfully!"
+        echo "🌐 Live URL: https://m-elkhou.github.io"
+        echo "📊 Lighthouse report available in artifacts"
+
+    - name: Performance Budget Check
+      run: |
+        node -e "
+          const results = require('./lighthouse-results.json');
+          const performance = results.lhr.categories.performance.score * 100;
+          const accessibility = results.lhr.categories.accessibility.score * 100;
+          const bestPractices = results.lhr.categories['best-practices'].score * 100;
+          const seo = results.lhr.categories.seo.score * 100;
+          
+          console.log('📊 Lighthouse Scores:');
+          console.log('Performance:', performance);
+          console.log('Accessibility:', accessibility);
+          console.log('Best Practices:', bestPractices);
+          console.log('SEO:', seo);
+          
+          if (performance < 90) {
+            console.error('❌ Performance score below 90!');
+            process.exit(1);
+          }
+          
+          if (accessibility < 95) {
+            console.error('❌ Accessibility score below 95!');
+            process.exit(1);
+          }
+          
+          console.log('✅ All performance budgets met!');
+        "
+
+  test-cross-browser:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, firefox, safari]
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Start Development Server
+      run: npm start &
+
+    - name: Wait for Server
+      run: sleep 10
+
+    - name: Run Cross-Browser Tests
+      run: |
+        echo "Testing on ${{ matrix.browser }}"
+        # Add browser-specific testing commands here
+        curl -f http://localhost:3000/index.html || exit 1
+
+  accessibility-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install Dependencies
+      run: |
+        npm ci
+        npm install -g @axe-core/cli
+
+    - name: Start Development Server
+      run: npm start &
+
+    - name: Wait for Server
+      run: sleep 10
+
+    - name: Run Accessibility Tests
+      run: |
+        axe http://localhost:3000/index.html --exit
+
+    - name: Generate Accessibility Report
+      run: |
+        axe http://localhost:3000/index.html --save accessibility-report.json
+
+    - name: Upload Accessibility Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: accessibility-report
+        path: accessibility-report.json

@@ -1,0 +1,79 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+    "color-hex-case": "lower",
+    "color-hex-length": "short",
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": ["first-nested"],
+        "ignore": ["stylelint-commands"]
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-custom-property",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-single-line-block"
+        ]
+      }
+    ],
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-declaration",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-single-line-block"
+        ]
+      }
+    ],
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
+    "unit-allowed-list": [
+      "em",
+      "rem",
+      "s",
+      "px",
+      "%",
+      "deg",
+      "vh",
+      "vw",
+      "vmin",
+      "vmax",
+      "ms",
+      "fr"
+    ]
+  }
+}
