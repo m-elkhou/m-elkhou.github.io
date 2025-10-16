@@ -101,7 +101,18 @@
             <a href="index.html" class="btn">Go to Main Portfolio</a>
             <a href="test.html" class="btn">Go to Test Page</a>
             <button onclick="location.reload()" class="btn">Reload Debug</button>
+            <button onclick="testDirectCSS()" class="btn">Test CSS Direct</button>
         </div>
+        
+        <script>
+        function testDirectCSS() {
+            const testDiv = document.createElement('div');
+            testDiv.style.cssText = 'position: fixed; top: 10px; right: 10px; background: var(--accent-primary, red); color: white; padding: 10px; border-radius: 5px; z-index: 10000;';
+            testDiv.textContent = 'CSS Test: ' + (getComputedStyle(document.documentElement).getPropertyValue('--accent-primary') || 'FAILED');
+            document.body.appendChild(testDiv);
+            setTimeout(() => document.body.removeChild(testDiv), 3000);
+        }
+        </script>
     </div>
 
     <script>
@@ -136,6 +147,13 @@
         // CSS loading test
         function testCSS() {
             const container = document.getElementById('css-test');
+            
+            // Test CSS variables directly from root
+            const rootStyles = getComputedStyle(document.documentElement);
+            const accentPrimary = rootStyles.getPropertyValue('--accent-primary').trim();
+            const spacingMd = rootStyles.getPropertyValue('--spacing-md').trim();
+            
+            // Test element with CSS variables
             const testElement = document.createElement('div');
             testElement.style.cssText = 'color: var(--accent-primary, red); font-size: var(--spacing-md, 16px);';
             document.body.appendChild(testElement);
@@ -146,13 +164,16 @@
             
             document.body.removeChild(testElement);
             
+            const isWorking = accentPrimary === '#00d4ff' || color.includes('rgb(0, 212, 255)');
+            
             const result = document.createElement('div');
             result.className = 'test-result info';
             result.innerHTML = `
                 <strong>CSS Variables Test:</strong><br>
-                --accent-primary: ${color}<br>
-                --spacing-md: ${fontSize}<br>
-                ${color.includes('rgb(0, 212, 255)') || color.includes('#00d4ff') ? '✅ CSS Variables Working' : '⚠️ CSS Variables May Not Be Loading'}
+                --accent-primary (raw): ${accentPrimary || 'not found'}<br>
+                --accent-primary (computed): ${color}<br>
+                --spacing-md: ${spacingMd || fontSize}<br>
+                ${isWorking ? '✅ CSS Variables Working' : '⚠️ CSS Variables May Not Be Loading'}
             `;
             container.appendChild(result);
         }
