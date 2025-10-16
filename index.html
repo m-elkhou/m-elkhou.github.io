@@ -61,8 +61,87 @@
     
     <!-- Critical CSS (inlined for performance) -->
     <style>
-        /* Critical CSS for above-the-fold content */
-        :root{--bg-primary:#0a0a0a;--text-primary:#ffffff;--accent-primary:#00d4ff;--accent-gradient:linear-gradient(135deg,#00d4ff 0%,#0099cc 100%);--font-primary:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-primary);background-color:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}.loading-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-primary);display:flex;justify-content:center;align-items:center;z-index:9999}.loader{width:60px;height:60px;border:3px solid #333;border-radius:50%;border-top-color:var(--accent-primary);animation:spin 1s ease-in-out infinite}@keyframes spin{to{transform:rotate(360deg)}}.navbar{position:fixed;top:0;left:0;width:100%;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid #333;z-index:1000;height:70px}.hero{min-height:100vh;display:flex;align-items:center;padding-top:70px}
+        /* CSS Variables */
+        :root {
+          --bg-primary: #0a0a0a;
+          --bg-secondary: #0f0f0f;
+          --bg-tertiary: #141414;
+          --bg-card: #1a1a1a;
+          --bg-hover: #202020;
+          --bg-glass: rgba(26, 26, 26, 0.8);
+          --text-primary: #ffffff;
+          --text-secondary: #e0e0e0;
+          --text-tertiary: #b3b3b3;
+          --accent-primary: #00d4ff;
+          --accent-secondary: #0099cc;
+          --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+          --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          --spacing-xs: 0.25rem;
+          --spacing-sm: 0.5rem;
+          --spacing-md: 1rem;
+          --spacing-lg: 1.5rem;
+          --spacing-xl: 2rem;
+          --spacing-xxl: 4rem;
+          --border-color: #2a2a2a;
+          --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+          --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+          --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          --radius-sm: 0.5rem;
+          --radius-md: 0.75rem;
+          --radius-lg: 1rem;
+          --radius-xl: 1.5rem;
+          --radius-full: 9999px;
+        }
+        
+        /* Critical CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+          font-family: var(--font-primary);
+          background-color: var(--bg-primary);
+          color: var(--text-primary);
+          line-height: 1.6;
+          overflow-x: hidden;
+        }
+        .loading-screen {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: var(--bg-primary);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+        }
+        .loader {
+          width: 60px;
+          height: 60px;
+          border: 3px solid #333;
+          border-radius: 50%;
+          border-top-color: var(--accent-primary);
+          animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(10, 10, 10, 0.95);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid #333;
+          z-index: 1000;
+          height: 70px;
+        }
+        .hero {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          padding-top: 70px;
+        }
     </style>
     
     <!-- Fonts -->
@@ -75,7 +154,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="stylesheet" href="css/modern-style.css" media="print" onload="this.media='all'">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
