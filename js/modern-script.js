@@ -261,6 +261,7 @@ class Portfolio {
         const increment = target / 50;
         const duration = 2000;
         const stepTime = duration / 50;
+        const suffix = element.getAttribute('data-suffix') || '';
 
         const timer = setInterval(() => {
             current += increment;
@@ -270,7 +271,7 @@ class Portfolio {
                 clearInterval(timer);
             }
             
-            element.textContent = Math.floor(current);
+            element.textContent = Math.floor(current) + suffix;
         }, stepTime);
     }
 
