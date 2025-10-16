@@ -9,12 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout
+    - name: Checkout dev branch
       uses: actions/checkout@v4
+      with:
+        ref: dev
+        fetch-depth: 0
 
-    - name: Push to main
+    - name: Deploy to main
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout -b main || git checkout main
+        
+        # Create or switch to main branch
+        git checkout -B main
+        
+        # Copy all files from dev to main
+        git add .
+        git commit -m "Deploy from dev branch" || echo "No changes to commit"
+        
+        # Force push to main
         git push origin main --force
