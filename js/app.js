@@ -114,7 +114,7 @@
   function setLang(l) {
     if (!CONTENT[l]) return;
     root.setAttribute('lang', l);
-    try { localStorage.setItem('lang', l); } catch (e) { /* ignore */ }
+    try { sessionStorage.setItem('lang', l); } catch (e) { /* ignore */ }
     var url = new URL(location.href);
     url.searchParams.set('lang', l);
     history.replaceState(null, '', url.pathname + url.search + url.hash);
@@ -124,7 +124,7 @@
   function toggleTheme() {
     var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
+    try { sessionStorage.setItem('theme', next); } catch (e) { /* ignore */ }
   }
 
   /* ---------- hero -------------------------------------------------------- */

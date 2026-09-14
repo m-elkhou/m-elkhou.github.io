@@ -25,16 +25,20 @@
 
   <link rel="icon" type="image/png" href="images/ab.png">
 
-  <!-- Theme + language are decided before first paint to avoid a flash -->
+  <!-- Dark theme and English by default. A toggle only lasts for the current visit
+       (sessionStorage); ?lang=fr opens the French version explicitly. -->
   <script>
     (function () {
+      var root = document.documentElement;
+      root.setAttribute('data-theme', 'dark');
+      root.setAttribute('lang', 'en');
       try {
-        var t = localStorage.getItem('theme');
-        document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+        localStorage.removeItem('theme');
+        localStorage.removeItem('lang');
+        if (sessionStorage.getItem('theme') === 'light') root.setAttribute('data-theme', 'light');
         var q = new URLSearchParams(location.search).get('lang');
-        var l = (q === 'fr' || q === 'en') ? q : localStorage.getItem('lang');
-        if (!l) l = (navigator.language || '').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
-        document.documentElement.setAttribute('lang', l);
+        var l = (q === 'fr' || q === 'en') ? q : sessionStorage.getItem('lang');
+        if (l === 'fr') root.setAttribute('lang', 'fr');
       } catch (e) { /* storage unavailable: defaults stay */ }
     })();
   </script>
@@ -42,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3.1.0">
+  <link rel="stylesheet" href="css/style.css?v=3.1.1">
 
   <script type="application/ld+json">
   {
@@ -122,8 +126,8 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 
-  <script src="js/content-en.js?v=3.1.0"></script>
-  <script src="js/content-fr.js?v=3.1.0"></script>
-  <script src="js/app.js?v=3.1.0"></script>
+  <script src="js/content-en.js?v=3.1.1"></script>
+  <script src="js/content-fr.js?v=3.1.1"></script>
+  <script src="js/app.js?v=3.1.1"></script>
 </body>
 </html>
