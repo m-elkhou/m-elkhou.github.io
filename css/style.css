@@ -3,6 +3,7 @@
    The original dark/cyan theme, kept and refined: Inter, near-black surfaces,
    one cyan gradient accent, loader, typing effect, counters, skill bars,
    reveal-on-scroll, lifting cards. No external JS/icon dependencies.
+   Animations play for every visitor, as on the original site.
    ========================================================================== */
 
 :root {
@@ -770,25 +771,23 @@ button {
   background: var(--card-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .hero [data-enter] {
-    animation: fadeInUp 0.8s var(--ease-out) both;
-  }
-
-  .hero .hero-image {
-    animation: fadeInRight 0.9s var(--ease-out) both;
-    animation-delay: 0.25s;
-  }
-
-  .hero [data-enter="1"] { animation-delay: 0.05s; }
-  .hero [data-enter="2"] { animation-delay: 0.15s; }
-  .hero [data-enter="3"] { animation-delay: 0.25s; }
-  .hero [data-enter="4"] { animation-delay: 0.35s; }
-  .hero [data-enter="5"] { animation-delay: 0.45s; }
-  .hero [data-enter="6"] { animation-delay: 0.55s; }
-  .hero [data-enter="7"] { animation-delay: 0.65s; }
-  .hero [data-enter="8"] { animation-delay: 0.75s; }
+.hero [data-enter] {
+  animation: fadeInUp 0.8s var(--ease-out) both;
 }
+
+.hero .hero-image {
+  animation: fadeInRight 0.9s var(--ease-out) both;
+  animation-delay: 0.25s;
+}
+
+.hero [data-enter="1"] { animation-delay: 0.05s; }
+.hero [data-enter="2"] { animation-delay: 0.15s; }
+.hero [data-enter="3"] { animation-delay: 0.25s; }
+.hero [data-enter="4"] { animation-delay: 0.35s; }
+.hero [data-enter="5"] { animation-delay: 0.45s; }
+.hero [data-enter="6"] { animation-delay: 0.55s; }
+.hero [data-enter="7"] { animation-delay: 0.65s; }
+.hero [data-enter="8"] { animation-delay: 0.75s; }
 
 @keyframes fadeInUp {
   from {
@@ -906,26 +905,24 @@ button {
 }
 
 /* Reveal on scroll (replaces AOS) ---------------------------------------- */
-@media (prefers-reduced-motion: no-preference) {
-  [data-reveal] {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
-    transition-delay: var(--reveal-delay, 0ms);
-  }
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
 
-  [data-reveal="left"] {
-    transform: translateX(-28px);
-  }
+[data-reveal="left"] {
+  transform: translateX(-28px);
+}
 
-  [data-reveal="right"] {
-    transform: translateX(28px);
-  }
+[data-reveal="right"] {
+  transform: translateX(28px);
+}
 
-  [data-reveal].in {
-    opacity: 1;
-    transform: none;
-  }
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
 }
 
 /* Cards ------------------------------------------------------------------ */
@@ -1163,14 +1160,12 @@ details .details-body > * + * {
   color: var(--text-primary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .cgrid[data-animate] .cgrid-bar {
-    transform: scaleX(0);
-  }
+.cgrid[data-animate] .cgrid-bar {
+  transform: scaleX(0);
+}
 
-  .cgrid.is-in .cgrid-bar {
-    animation: draw 0.9s var(--ease-out) forwards;
-  }
+.cgrid.is-in .cgrid-bar {
+  animation: draw 0.9s var(--ease-out) forwards;
 }
 
 @keyframes draw {
@@ -2065,20 +2060,6 @@ details .details-body > * + * {
   padding: calc(var(--nav-h) + 2rem) var(--gutter) 2rem;
   max-width: var(--max);
   margin-inline: auto;
-}
-
-/* Reduced motion --------------------------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
 /* Print ------------------------------------------------------------------ */

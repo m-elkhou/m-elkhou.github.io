@@ -15,7 +15,6 @@
   var nav = document.getElementById('nav');
   var backToTop = document.getElementById('back-to-top');
   var loading = document.getElementById('loading-screen');
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var ICONS = {
     mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
@@ -329,7 +328,7 @@
         cardEl.classList.toggle('is-open', d.open);
         if (d.open) {
           var top = cardEl.getBoundingClientRect().top;
-          if (top < 80) window.scrollBy({ top: top - 96, behavior: reduceMotion ? 'auto' : 'smooth' });
+          if (top < 80) window.scrollBy({ top: top - 96, behavior: 'smooth' });
         }
       });
       return cardEl;
@@ -548,7 +547,6 @@
 
   function initReveal() {
     var targets = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
-    if (reduceMotion) { targets.forEach(function (t) { t.classList.add('in'); }); return; }
     observe(targets, { rootMargin: '0px 0px -10% 0px', threshold: 0 }, function (t) { t.classList.add('in'); });
   }
 
@@ -568,7 +566,7 @@
   function animateCounter(node) {
     var target = parseFloat(node.getAttribute('data-count')) || 0;
     var suffix = node.getAttribute('data-suffix') || '';
-    if (reduceMotion || !('requestAnimationFrame' in window)) { node.textContent = target + suffix; return; }
+    if (!('requestAnimationFrame' in window)) { node.textContent = target + suffix; return; }
     var duration = 1800;
     var start = null;
     function frame(ts) {
@@ -593,7 +591,6 @@
     if (!node) return;
     var texts = JSON.parse(node.getAttribute('data-typing') || '[]');
     if (!texts.length) return;
-    if (reduceMotion) { node.textContent = texts[0]; return; }
     var ti = 0, ci = 0, deleting = false;
     function type() {
       var current = texts[ti];
@@ -707,7 +704,7 @@
   }
   if (backToTop) {
     backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
   window.addEventListener('scroll', onScroll, { passive: true });

@@ -11,7 +11,7 @@ Bilingual (EN / FR) portfolio of Mohammed EL-KHOU — Data/Cloud Engineer (AWS),
   - [`js/content-en.js`](js/content-en.js)
   - [`js/content-fr.js`](js/content-fr.js)
 - [`js/app.js`](js/app.js) renders the page from the active language and drives the EN/FR toggle and the dark/light toggle (the page always opens in dark + English; a toggle lasts for the current visit, `?lang=fr` opens French directly), the loading screen, the typing effect, the animated counters, the skill bars, the reveal-on-scroll, the mobile menu, the scroll-spy, the career grid and the project filters — all without external libraries.
-- [`css/style.css`](css/style.css) is the original dark/cyan theme, refined: design tokens (dark and light palettes), Inter via Google Fonts, layout, animations (all disabled under `prefers-reduced-motion`).
+- [`css/style.css`](css/style.css) is the original dark/cyan theme, refined: design tokens (dark and light palettes), Inter via Google Fonts, layout, animations (played for every visitor, including when the OS asks for reduced motion).
 - [`assets/cv/`](assets/cv/) contains the downloadable CV (PDF).
 
 ## Editing content
