@@ -1,7 +1,7 @@
 {
   "name": "mohammed-elkhou-portfolio",
-  "version": "2.0.0",
-  "description": "Modern portfolio website for Mohammed EL-KHOU - Data Scientist & AI Engineer",
+  "version": "3.0.0",
+  "description": "Portfolio website of Mohammed EL-KHOU — Data/Cloud Engineer (AWS), Big Data/Python developer, R&D ML/AI",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 3000",
@@ -9,14 +9,16 @@
   },
   "keywords": [
     "portfolio",
-    "data-science",
-    "ai",
+    "data-engineering",
+    "cloud",
+    "aws",
+    "big-data",
+    "etl",
     "machine-learning",
-    "computer-vision",
-    "web-development",
-    "responsive",
-    "dark-theme",
-    "modern"
+    "llm",
+    "adtech",
+    "bilingual",
+    "dark-theme"
   ],
   "author": {
     "name": "Mohammed EL-KHOU",

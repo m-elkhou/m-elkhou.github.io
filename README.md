@@ -1,51 +1,45 @@
-# Mohammed EL-KHOU - Modern Portfolio ⚡️
+# Mohammed EL-KHOU — Portfolio
 
-[![Security Status](https://img.shields.io/badge/security-enhanced-green.svg)](./SECURITY.md)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](./package.json)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+Live: **<https://m-elkhou.github.io/>**
 
-## A modern, secure, and accessible portfolio for Data Scientists & AI Engineers
+Bilingual (EN / FR) portfolio of Mohammed EL-KHOU — Data/Cloud Engineer (AWS), Big Data/Python developer, R&D ML/AI.
 
-🌐 **Live Demo**: [https://m-elkhou.github.io/](https://m-elkhou.github.io/)
+## How it is built
 
-### ✨ Features
+- **No build step, no framework, no external JavaScript.** Plain HTML + CSS + vanilla JS served by GitHub Pages.
+- **Content lives in data files**, one per language, with identical structure:
+  - [`js/content-en.js`](js/content-en.js)
+  - [`js/content-fr.js`](js/content-fr.js)
+- [`js/app.js`](js/app.js) renders the page from the active language and drives the EN/FR toggle (`?lang=fr` also works), the dark/light toggle (dark by default), the loading screen, the typing effect, the animated counters, the skill bars, the reveal-on-scroll, the mobile menu, the scroll-spy, the career grid and the project filters — all without external libraries.
+- [`css/style.css`](css/style.css) is the original dark/cyan theme, refined: design tokens (dark and light palettes), Inter via Google Fonts, layout, animations (all disabled under `prefers-reduced-motion`).
+- [`assets/cv/`](assets/cv/) contains the downloadable CV (PDF).
 
-- 🎨 **Modern Dark Theme** - Sleek and professional design
-- 🔒 **Security First** - Enhanced CSP, input validation, XSS protection
-- ♿ **Accessibility** - WCAG 2.1 compliant with ARIA labels
-- 📱 **Fully Responsive** - Optimized for all devices
-- ⚡ **Performance Optimized** - Fast loading with modern web standards
-- 🎯 **SEO Optimized** - Structured data and meta tags
-- 📊 **PWA Ready** - Progressive Web App capabilities
+## Editing content
 
-### 🛠️ Technologies Used
+Edit the same entry in **both** `js/content-en.js` and `js/content-fr.js`. The two files must keep the same shape (same keys, same array lengths, same `id`s for roles and projects). A quick check:
 
-#### Frontend
-- **HTML5** - Semantic markup with accessibility features
-- **CSS3** - Modern CSS with custom properties and animations
-- **JavaScript ES6+** - Class-based architecture with modern features
-- **AOS** - Animate On Scroll library
+```bash
+node -e '
+const fs=require("fs"); global.window={};
+eval(fs.readFileSync("js/content-en.js","utf8")); eval(fs.readFileSync("js/content-fr.js","utf8"));
+const shape=(v,p,o)=>{Array.isArray(v)?(o.push(p+"[]"+v.length),v.forEach((x,i)=>shape(x,p+i,o))):v&&typeof v==="object"?Object.keys(v).sort().forEach(k=>shape(v[k],p+"."+k,o)):o.push(p);return o};
+const a=shape(window.CONTENT.en,"",[]),b=shape(window.CONTENT.fr,"",[]);
+console.log(a.join()===b.join()?"EN and FR shapes match":"MISMATCH");'
+```
 
-#### Security & Performance
-- **Content Security Policy** - Strict CSP implementation
-- **Input Validation** - Comprehensive form validation and sanitization
-- **Service Worker** - Caching and offline capabilities
-- **Image Optimization** - Optimized images for faster loading
+Bump the `?v=` query on the `<link>`/`<script>` tags in `index.html` after changing CSS or JS so visitors do not get a cached copy.
 
-### 🔒 Security Features
+## Local preview
 
-- **Content Security Policy** - Prevents XSS attacks
-- **Input Sanitization** - All user inputs are validated and sanitized
-- **Security Headers** - Comprehensive security headers implementation
-- **No Inline Scripts** - All scripts use nonces for security
-- **HTTPS Only** - Secure connections enforced
+```bash
+python -m http.server 3000
+# open http://127.0.0.1:3000/
+```
 
-For detailed security information, see [SECURITY.md](./SECURITY.md)
+## Deployment
 
-### 👨💻 Author
+GitHub Pages serves the `dev` branch; a workflow mirrors `dev` to `main` on every push. Work on a feature branch and merge into `dev` to publish.
 
-**Mohammed EL-KHOU**
-- 🌐 Website: [m-elkhou.github.io](https://m-elkhou.github.io/)
-- 💼 LinkedIn: [linkedin.com/in/m-elkhou](https://www.linkedin.com/in/m-elkhou/)
-- 🐙 GitHub: [github.com/m-elkhou](https://github.com/m-elkhou)
-- 📧 Email: m.elkhou@hotmail.com
+## Author
+
+**Mohammed EL-KHOU** — [LinkedIn](https://www.linkedin.com/in/m-elkhou/) · [GitHub](https://github.com/m-elkhou) · <m.elkhou@hotmail.com>
