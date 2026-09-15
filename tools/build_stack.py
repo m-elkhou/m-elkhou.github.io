@@ -37,9 +37,12 @@ DEVICON_ALIAS = {
     "sklearn": "scikitlearn", "gcp": "googlecloud", "aws": "amazonwebservices",
     "sqlserver": "microsoftsqlserver", "spark": "apachespark", "kafka": "apachekafka",
     "airflow": "apacheairflow", "hive": "apachehive", "solr": "apachesolr",
-    "arrow": "apachearrow", "parquet": "apacheparquet", "bigquery": "googlecloud",
+    "arrow": "apachearrow", "parquet": "apacheparquet",
     "sql": "azuresqldatabase",
 }
+# devicon has no BigQuery mark of its own and would hand back the generic Google
+# Cloud logo, duplicating the GCP tile; the Simple Icons fallback is the real one.
+NO_DEVICON = {"bigquery"}
 # Prefer a version that carries the real colours.
 DEVICON_VERSIONS = ("original", "plain")
 
@@ -149,6 +152,27 @@ def normalise(svg, ink=True):
     return view, inner
 
 
+SOLID_RE = re.compile(r'(?:fill|stop-color)\s*[=:]\s*"?(#[0-9a-fA-F]{3,6})')
+
+
+def contrast_flags(markup):
+    """Flag logos whose own palette is too weak against a tile, per theme.
+
+    Brand colours are never rewritten — a flagged tile is lifted with a CSS
+    filter instead, so the logo keeps its identity and stays readable.
+    """
+    # a logo that paints with var(--logo-ink) already carries a contrasting part
+    # in both themes (the black "JS" on the yellow square, Tux's outline...)
+    if "var(--logo-ink)" in markup:
+        return 0, 0
+    cols = set(SOLID_RE.findall(markup))
+    if not cols:
+        return 0, 0
+    best_dark = max(contrast(c, "#1a1a1a") for c in cols)
+    best_light = max(contrast(c, "#ffffff") for c in cols)
+    return (1 if best_dark < 3.0 else 0), (1 if best_light < 3.0 else 0)
+
+
 def uniquify_ids(inner, key):
     """Namespace ids/url() refs so gradients from different logos cannot clash."""
     ids = set(re.findall(r'\bid="([^"]+)"', inner))
@@ -206,7 +230,7 @@ def main():
 
         # 2) devicon full colour ----------------------------------------------------
         cand = [DEVICON_ALIAS.get(key, key), key, name.lower().replace(" ", "").replace(".", "")]
-        hit = next((dev[c] for c in cand if c in dev), None)
+        hit = None if key in NO_DEVICON else next((dev[c] for c in cand if c in dev), None)
         if hit:
             have = hit.get("versions", {}).get("svg", [])
             ver = next((v for v in DEVICON_VERSIONS if v in have), have[0] if have else None)
@@ -235,6 +259,11 @@ def main():
         )
         items.append(entry); stats["simple"] += 1
         print(f"  simple  {key:14s} (no devicon)")
+
+    for it in items:
+        ld, ll = contrast_flags(it["s"])
+        if ld: it["ld"] = 1
+        if ll: it["ll"] = 1
 
     payload = {
         "categories": [{"id": c["id"], "title": c["title"]} for c in tech["categories"]],

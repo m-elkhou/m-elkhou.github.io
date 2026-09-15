@@ -2200,8 +2200,8 @@ details .details-body > * + * {
 .stack-tile .stack-glyph {
   position: relative;
   z-index: 1;
-  width: 58%;
-  height: 58%;
+  width: 50%;
+  height: 50%;
   display: block;
 }
 
@@ -2240,6 +2240,11 @@ details .details-body > * + * {
 }
 
 [data-theme="light"] .stack-tile { --c: var(--c-light); --logo-ink: #10161c; }
+
+/* A few logos are drawn in a colour too weak for one of the tiles (MySQL navy,
+   Oracle red). Lift them with a filter rather than repainting the brand. */
+[data-theme="dark"] .stack-tile.lift-dark .stack-glyph { filter: brightness(1.7) saturate(1.05); }
+[data-theme="light"] .stack-tile.lift-light .stack-glyph { filter: brightness(0.72); }
 [data-theme="light"] .stack-tile::before { opacity: 0.14; }
 [data-theme="light"] .stack-tile::after {
   background: linear-gradient(90deg, transparent, rgba(10, 15, 20, 0.1), transparent);

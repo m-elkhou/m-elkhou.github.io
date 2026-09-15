@@ -407,13 +407,31 @@
             // monochrome fallbacks, whose markup paints with currentColor.
             var style = '--halo:#' + t.h + ';--i:' + (i % 12);
             if (t.d) style += ';--c-dark:' + t.d + ';--c-light:' + t.l;
-            return el('li', { class: 'stack-tile' + (t.d ? ' is-mono' : ''), style: style },
+            var cls = 'stack-tile' + (t.d ? ' is-mono' : '') +
+              (t.ld ? ' lift-dark' : '') + (t.ll ? ' lift-light' : '');
+            return el('li', { class: cls, style: style },
               el('span', { class: 'stack-ico', html: glyphSvg(t) }),
               el('span', { class: 'stack-name', text: t.n })
             );
           }))
         );
     });
+  }
+
+  /* Every vendor draws on its own canvas: devicon fills 128x128 edge to edge, the
+     AWS pictograms sit in a padded 64x64, Simple Icons use 24x24. Left alone they
+     land at different optical sizes and off-centre. Re-fitting each viewBox to the
+     ink's real bounding box makes them one consistent, centred set. */
+  function fitGlyphs(scope) {
+    var svgs = scope.querySelectorAll('.stack-glyph');
+    for (var i = 0; i < svgs.length; i++) {
+      try {
+        var b = svgs[i].getBBox();
+        if (b.width > 0.01 && b.height > 0.01) {
+          svgs[i].setAttribute('viewBox', b.x + ' ' + b.y + ' ' + b.width + ' ' + b.height);
+        }
+      } catch (e) { /* not rendered yet: keep the vendor viewBox */ }
+    }
   }
 
   /* The logo data is heavy (~450 kB of vendor SVG), so the section ships as a
@@ -436,6 +454,7 @@
     function fill() {
       if (!window.TECH_STACK || !body || body.childNodes.length) return;
       append(body, stackBody(window.TECH_STACK));
+      fitGlyphs(body);
       // these nodes appeared after initReveal ran, so give them their own observer
       observe(Array.prototype.slice.call(body.querySelectorAll('[data-reveal]')),
         { rootMargin: '0px 0px -10% 0px', threshold: 0 },
