@@ -863,6 +863,20 @@ window.CONTENT.fr = {
   skills: {
     title: "Compétences",
     tagline: "Mon expertise technique",
+    stack: {
+      title: "Stack technique",
+      note: "Les technologies que j'utilise au quotidien, par domaine. Survolez un logo pour afficher son nom.",
+      categories: {
+        languages: "Langages",
+        data: "Data & Big Data",
+        aws: "AWS",
+        gcp: "Google Cloud",
+        ai: "IA & Machine Learning",
+        databases: "Bases de données",
+        devops: "DevOps & Infrastructure",
+        tools: "Web, automatisation & outils"
+      }
+    },
     proficiency: [
       { title: "Langages de programmation", items: [
         { name: "Python", pct: 98 },

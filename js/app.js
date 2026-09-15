@@ -381,6 +381,43 @@
     ]);
   }
 
+  /* ---------- tech stack (logo wall) -------------------------------------- */
+  function glyphSvg(t) {
+    var rule = t.f ? ' fill-rule="evenodd" clip-rule="evenodd"' : '';
+    var paths = t.p.map(function (d) { return '<path d="' + d + '"/>'; }).join('');
+    // viewBox is the glyph's own bounding box, so every logo optically fills the tile.
+    return '<svg class="stack-glyph" viewBox="' + t.b.join(' ') + '" preserveAspectRatio="xMidYMid meet"' +
+      ' aria-hidden="true" focusable="false"><g fill="currentColor"' + rule + '>' + paths + '</g></svg>';
+  }
+
+  function renderStack(s) {
+    var data = window.TECH_STACK;
+    if (!data || !data.tech || !s.stack) return null;
+    var labels = s.stack.categories || {};
+
+    return el('div', { class: 'stack' },
+      el('h3', { class: 'category-title', text: s.stack.title, 'data-reveal': 'up' }),
+      s.stack.note ? el('p', { class: 'stack-note', text: s.stack.note, 'data-reveal': 'up' }) : null,
+      data.categories.map(function (cat) {
+        var items = data.tech.filter(function (t) { return t.c === cat.id; });
+        if (!items.length) return null;
+        return el('div', { class: 'stack-cat', 'data-reveal': 'up' },
+          el('div', { class: 'stack-cat-head' },
+            el('span', { class: 'stack-cat-name', text: labels[cat.id] || cat.title }),
+            el('span', { class: 'stack-cat-rule', 'aria-hidden': 'true' }),
+            el('span', { class: 'stack-cat-count', text: items.length < 10 ? '0' + items.length : String(items.length) })
+          ),
+          el('ul', { class: 'stack-grid' }, items.map(function (t, i) {
+            return el('li', { class: 'stack-tile', style: '--c-dark:' + t.d + ';--c-light:' + t.l + ';--i:' + (i % 12) },
+              el('span', { class: 'stack-ico', html: glyphSvg(t) }),
+              el('span', { class: 'stack-name', text: t.n })
+            );
+          }))
+        );
+      })
+    );
+  }
+
   /* ---------- skills ------------------------------------------------------ */
   function renderSkills(c) {
     var s = c.skills;
@@ -421,7 +458,7 @@
       })
     );
 
-    return section('skills', s, [proficiency, groups, exp]);
+    return section('skills', s, [renderStack(s), proficiency, groups, exp]);
   }
 
   /* ---------- education --------------------------------------------------- */

@@ -863,6 +863,20 @@ window.CONTENT.en = {
   skills: {
     title: "Skills",
     tagline: "My technical expertise",
+    stack: {
+      title: "Tech stack",
+      note: "The technologies I build with, grouped by area. Hover a logo to see its name.",
+      categories: {
+        languages: "Languages",
+        data: "Data & Big Data",
+        aws: "AWS",
+        gcp: "Google Cloud",
+        ai: "AI & Machine Learning",
+        databases: "Databases",
+        devops: "DevOps & Infrastructure",
+        tools: "Web, Automation & Tools"
+      }
+    },
     proficiency: [
       { title: "Programming languages", items: [
         { name: "Python", pct: 98 },

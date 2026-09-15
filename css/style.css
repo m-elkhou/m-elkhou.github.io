@@ -2095,3 +2095,173 @@ details .details-body > * + * {
     grid-column: auto;
   }
 }
+
+/* ---------- tech stack (logo wall) ------------------------------------- */
+.stack { margin-bottom: 3rem; }
+
+.stack-note {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: -0.4rem 0 1.6rem;
+  max-width: 62ch;
+}
+
+.stack-cat { margin-bottom: 1.75rem; }
+
+.stack-cat-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.stack-cat-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.stack-cat-name::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.stack-cat-rule {
+  flex: 1;
+  height: 0;
+  border-top: 1px dotted var(--border);
+}
+
+.stack-cat-count {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.stack-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 0.7rem;
+}
+
+.stack-tile {
+  --c: var(--c-dark);
+  position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, var(--card-bg-2), var(--card-bg));
+  color: var(--c);
+  transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+
+/* brand-coloured glow, driven by the tile's own colour */
+.stack-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(60% 55% at 50% 42%, currentColor, transparent 70%);
+  opacity: 0.16;
+  transition: opacity 0.25s var(--ease-out);
+  pointer-events: none;
+}
+
+/* hairline highlight along the top edge */
+.stack-tile::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22%;
+  right: 22%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  pointer-events: none;
+}
+
+.stack-tile .stack-glyph {
+  position: relative;
+  z-index: 1;
+  width: 52%;
+  height: 52%;
+  display: block;
+}
+
+.stack-tile:hover {
+  transform: translateY(-5px);
+  border-color: currentColor;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.38);
+}
+
+.stack-tile:hover::before { opacity: 0.34; }
+
+/* name shown on hover / keyboard focus */
+.stack-name {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.3rem 0.55rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  color: var(--text-primary);
+  background: var(--card-bg-2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s var(--ease-out), transform 0.18s var(--ease-out);
+  z-index: 3;
+}
+
+.stack-tile:hover .stack-name,
+.stack-tile:focus-within .stack-name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+[data-theme="light"] .stack-tile { --c: var(--c-light); }
+[data-theme="light"] .stack-tile::before { opacity: 0.14; }
+[data-theme="light"] .stack-tile::after {
+  background: linear-gradient(90deg, transparent, rgba(10, 15, 20, 0.1), transparent);
+}
+[data-theme="light"] .stack-tile:hover { box-shadow: 0 10px 24px rgba(10, 15, 20, 0.14); }
+
+@keyframes stackPop {
+  from { opacity: 0; transform: translateY(10px) scale(0.94); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* staggered entrance once the category scrolls in; `backwards` (not `both`)
+   so the finished animation does not outrank the hover transform */
+.stack-cat.in .stack-tile {
+  animation: stackPop 0.45s var(--ease-out) backwards;
+  animation-delay: calc(var(--i) * 35ms);
+}
+
+@media (max-width: 640px) {
+  .stack-grid { grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 0.55rem; }
+  .stack-tile { border-radius: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-cat.in .stack-tile { animation: none; }
+  .stack-tile, .stack-name { transition: none; }
+}
