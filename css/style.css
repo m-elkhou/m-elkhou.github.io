@@ -2260,8 +2260,3 @@ details .details-body > * + * {
   .stack-grid { grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 0.55rem; }
   .stack-tile { border-radius: 14px; }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .stack-cat.in .stack-tile { animation: none; }
-  .stack-tile, .stack-name { transition: none; }
-}
