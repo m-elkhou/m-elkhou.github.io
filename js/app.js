@@ -383,22 +383,17 @@
 
   /* ---------- tech stack (logo wall) -------------------------------------- */
   function glyphSvg(t) {
-    var rule = t.f ? ' fill-rule="evenodd" clip-rule="evenodd"' : '';
-    var paths = t.p.map(function (d) { return '<path d="' + d + '"/>'; }).join('');
-    // viewBox is the glyph's own bounding box, so every logo optically fills the tile.
-    return '<svg class="stack-glyph" viewBox="' + t.b.join(' ') + '" preserveAspectRatio="xMidYMid meet"' +
-      ' aria-hidden="true" focusable="false"><g fill="currentColor"' + rule + '>' + paths + '</g></svg>';
+    // t.s is the vendor's own markup: full colour for devicon, re-inked white for the
+    // AWS pictograms, currentColor for the monochrome Simple Icons fallback.
+    return '<svg class="stack-glyph" viewBox="' + t.v + '" preserveAspectRatio="xMidYMid meet"' +
+      ' aria-hidden="true" focusable="false">' + t.s + '</svg>';
   }
 
-  function renderStack(s) {
-    var data = window.TECH_STACK;
-    if (!data || !data.tech || !s.stack) return null;
-    var labels = s.stack.categories || {};
+  var stackLabels = null;
 
-    return el('div', { class: 'stack' },
-      el('h3', { class: 'category-title', text: s.stack.title, 'data-reveal': 'up' }),
-      s.stack.note ? el('p', { class: 'stack-note', text: s.stack.note, 'data-reveal': 'up' }) : null,
-      data.categories.map(function (cat) {
+  function stackBody(data) {
+    var labels = (stackLabels && stackLabels.categories) || {};
+    return data.categories.map(function (cat) {
         var items = data.tech.filter(function (t) { return t.c === cat.id; });
         if (!items.length) return null;
         return el('div', { class: 'stack-cat', 'data-reveal': 'up' },
@@ -408,14 +403,52 @@
             el('span', { class: 'stack-cat-count', text: items.length < 10 ? '0' + items.length : String(items.length) })
           ),
           el('ul', { class: 'stack-grid' }, items.map(function (t, i) {
-            return el('li', { class: 'stack-tile', style: '--c-dark:' + t.d + ';--c-light:' + t.l + ';--i:' + (i % 12) },
+            // --halo tints the glow and the hover border; --c-* only exists on the
+            // monochrome fallbacks, whose markup paints with currentColor.
+            var style = '--halo:#' + t.h + ';--i:' + (i % 12);
+            if (t.d) style += ';--c-dark:' + t.d + ';--c-light:' + t.l;
+            return el('li', { class: 'stack-tile' + (t.d ? ' is-mono' : ''), style: style },
               el('span', { class: 'stack-ico', html: glyphSvg(t) }),
               el('span', { class: 'stack-name', text: t.n })
             );
           }))
         );
-      })
+    });
+  }
+
+  /* The logo data is heavy (~450 kB of vendor SVG), so the section ships as a
+     placeholder and the data is fetched only when the reader nears it. */
+  function renderStack(s) {
+    if (!s.stack) return null;
+    stackLabels = s.stack;
+    return el('div', { class: 'stack', 'data-stack': 'js/stack.js?v=3.1.5' },
+      el('h3', { class: 'category-title', text: s.stack.title, 'data-reveal': 'up' }),
+      s.stack.note ? el('p', { class: 'stack-note', text: s.stack.note, 'data-reveal': 'up' }) : null,
+      el('div', { class: 'stack-body' })
     );
+  }
+
+  function initStack() {
+    var host = document.querySelector('.stack[data-stack]');
+    if (!host) return;
+    var body = host.querySelector('.stack-body');
+
+    function fill() {
+      if (!window.TECH_STACK || !body || body.childNodes.length) return;
+      append(body, stackBody(window.TECH_STACK));
+      // these nodes appeared after initReveal ran, so give them their own observer
+      observe(Array.prototype.slice.call(body.querySelectorAll('[data-reveal]')),
+        { rootMargin: '0px 0px -10% 0px', threshold: 0 },
+        function (t) { t.classList.add('in'); });
+    }
+
+    observe([host], { rootMargin: '600px 0px' }, function () {
+      if (window.TECH_STACK) { fill(); return; }
+      var sc = document.createElement('script');
+      sc.src = host.getAttribute('data-stack');
+      sc.onload = fill;
+      document.head.appendChild(sc);
+    });
   }
 
   /* ---------- skills ------------------------------------------------------ */
@@ -713,6 +746,7 @@
     initSkillBars();
     initCounters();
     initTyping();
+    initStack();
     onScroll();
 
     // Re-open a deep link target after re-render (e.g. #p-xyz or #experience)

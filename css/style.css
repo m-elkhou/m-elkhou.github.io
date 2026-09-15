@@ -2159,6 +2159,8 @@ details .details-body > * + * {
 }
 
 .stack-tile {
+  /* ink for logos the vendor draws in near-black, so they survive a dark tile */
+  --logo-ink: #f0f3f7;
   --c: var(--c-dark);
   position: relative;
   aspect-ratio: 1;
@@ -2177,7 +2179,7 @@ details .details-body > * + * {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(60% 55% at 50% 42%, currentColor, transparent 70%);
+  background: radial-gradient(60% 55% at 50% 42%, var(--halo, currentColor), transparent 70%);
   opacity: 0.16;
   transition: opacity 0.25s var(--ease-out);
   pointer-events: none;
@@ -2198,14 +2200,14 @@ details .details-body > * + * {
 .stack-tile .stack-glyph {
   position: relative;
   z-index: 1;
-  width: 52%;
-  height: 52%;
+  width: 58%;
+  height: 58%;
   display: block;
 }
 
 .stack-tile:hover {
   transform: translateY(-5px);
-  border-color: currentColor;
+  border-color: var(--halo, currentColor);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.38);
 }
 
@@ -2237,7 +2239,7 @@ details .details-body > * + * {
   transform: translateX(-50%) translateY(0);
 }
 
-[data-theme="light"] .stack-tile { --c: var(--c-light); }
+[data-theme="light"] .stack-tile { --c: var(--c-light); --logo-ink: #10161c; }
 [data-theme="light"] .stack-tile::before { opacity: 0.14; }
 [data-theme="light"] .stack-tile::after {
   background: linear-gradient(90deg, transparent, rgba(10, 15, 20, 0.1), transparent);
