@@ -439,7 +439,7 @@
   function renderStack(s) {
     if (!s.stack) return null;
     stackLabels = s.stack;
-    return el('div', { class: 'stack', 'data-stack': 'js/stack.js?v=3.1.6' },
+    return el('div', { class: 'stack', 'data-stack': 'js/stack.js?v=3.1.7' },
       el('h3', { class: 'category-title', text: s.stack.title, 'data-reveal': 'up' }),
       s.stack.note ? el('p', { class: 'stack-note', text: s.stack.note, 'data-reveal': 'up' }) : null,
       el('div', { class: 'stack-body' })

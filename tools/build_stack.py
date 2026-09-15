@@ -219,12 +219,15 @@ def main():
                 # drop the full-bleed background rect: the tile already provides one
                 raw = re.sub(r'<g[^>]*Icon-Architecture-BG[^>]*>.*?</g>', "", raw, flags=re.S)
                 view, inner = normalise(raw, ink=False)
-                # the symbol is drawn white; re-ink it so it reads on either theme
-                inner = re.sub(r'fill="#FFFFFF"', 'fill="var(--logo-ink)"', inner, flags=re.I)
-                inner = re.sub(r'fill="#FFF"', 'fill="var(--logo-ink)"', inner, flags=re.I)
-                if 'fill=' not in inner:
-                    inner = f'<g fill="var(--logo-ink)">{inner}</g>'
-                entry.update(v=view, s=uniquify_ids(inner, key), h=g["hex"])
+                # AWS draws the symbol white on a coloured square. We drop the square
+                # and paint the symbol in that service family's own colour, so the AWS
+                # block keeps Amazon's colour coding instead of reading as white line art.
+                inner = re.sub(r'fill="#FFF(?:FFF)?"', 'fill="currentColor"', inner, flags=re.I)
+                if "fill=" not in inner:
+                    inner = f'<g fill="currentColor">{inner}</g>'
+                entry.update(v=view, s=uniquify_ids(inner, key), h=g["hex"],
+                             d=legible(g["hex"], "dark", key),
+                             l=legible(g["hex"], "light", key))
                 items.append(entry); stats["aws"] += 1
                 continue
 

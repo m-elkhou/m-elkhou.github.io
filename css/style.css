@@ -2197,11 +2197,19 @@ details .details-body > * + * {
   pointer-events: none;
 }
 
-.stack-tile .stack-glyph {
-  position: relative;
+/* An absolutely-positioned square box: the logo is then the same size and dead
+   centre in every tile. Sizing the svg in percentages left it resolving against a
+   span with no definite box, so tall logos (Scala, Java) overflowed the tile. */
+.stack-ico {
+  position: absolute;
+  inset: 28%;
   z-index: 1;
-  width: 50%;
-  height: 50%;
+  display: block;
+}
+
+.stack-tile .stack-glyph {
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
